@@ -281,8 +281,8 @@ const VideoSection = () => {
             <motion.div 
               key={video.id}
               variants={fadeIn('up', 'tween', index * 0.1, 0.6)}
-              className="video-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform duration-500 group hover:shadow-xl"
-              style={{ boxShadow: '0 10px 30px -5px rgba(12, 175, 96, 0.1)' }}
+              className="video-card bg-white rounded-xl shadow-md overflow-hidden transform transition-all duration-300 group hover:shadow-lg"
+              style={{ boxShadow: '0 10px 20px -5px rgba(12, 175, 96, 0.07)' }}
             >
               <div 
                 className="relative h-56 md:h-72 overflow-hidden cursor-pointer"
@@ -301,22 +301,26 @@ const VideoSection = () => {
                 <img 
                   src={video.thumbnailUrl} 
                   alt={`${video.title} thumbnail`} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />
                 
+                {/* New hover overlay with play icon */}
+                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-40 transition-all duration-300 ease-in-out"></div>
+                
+                {/* Play icon that appears on hover */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <motion.div 
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="w-16 h-16 bg-[#0CAF60] rounded-full flex items-center justify-center cursor-pointer shadow-lg"
-                    style={{ boxShadow: '0 0 20px rgba(12, 175, 96, 0.5)' }}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={{ opacity: 0, scale: 0.8 }}
+                    whileHover={{ opacity: 1, scale: 1 }}
+                    className="group-hover:opacity-100 opacity-0 transition-all duration-300 ease-out"
                   >
-                    <Play className="text-white h-6 w-6 ml-1" />
+                    <div className="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg" 
+                      style={{ boxShadow: '0 0 30px rgba(12, 175, 96, 0.4)' }}>
+                      <Play className="text-[#0CAF60] h-7 w-7 ml-1" />
+                    </div>
                   </motion.div>
                 </div>
-                
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
               </div>
               
               <div className="p-6">

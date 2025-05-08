@@ -79,9 +79,15 @@ const SoftwareSection = () => {
             <motion.div 
               key={index} 
               variants={fadeIn('up', 'tween', index * 0.05, 0.5)}
-              className="flex flex-col items-center"
+              className={`flex flex-col items-center ${tool.name === "Blender" ? "cursor-pointer" : ""}`}
+              onClick={() => {
+                if (tool.name === "Blender" || tool.description === "3D Graphics") {
+                  // Scroll to video section when 3D Animation/Blender is clicked
+                  document.getElementById('video')?.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
-              <div className="w-20 h-20 bg-white rounded-md shadow-md flex items-center justify-center mb-4 p-2">
+              <div className={`w-20 h-20 bg-white rounded-md shadow-md flex items-center justify-center mb-4 p-2 ${tool.name === "Blender" ? "hover:shadow-lg transition-shadow" : ""}`}>
                 <img 
                   src={tool.logo} 
                   alt={`${tool.name} logo`} 
@@ -89,7 +95,10 @@ const SoftwareSection = () => {
                 />
               </div>
               <h3 className="font-bold text-lg mb-1">{tool.name}</h3>
-              <p className="text-gray-600 text-sm text-center">{tool.description}</p>
+              <p className={`text-gray-600 text-sm text-center ${tool.name === "Blender" ? "text-[#0CAF60]" : ""}`}>{tool.description}</p>
+              {tool.name === "Blender" && (
+                <span className="text-xs text-[#0CAF60] mt-1">(Click to view examples)</span>
+              )}
             </motion.div>
           ))}
         </motion.div>

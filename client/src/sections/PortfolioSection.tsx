@@ -164,8 +164,8 @@ const PortfolioSection = () => {
               <motion.div 
                 key={index}
                 variants={fadeIn('up', 'tween', index * 0.1, 0.5)}
-                className="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer transform transition-all duration-500 hover:-translate-y-2 hover:shadow-xl"
-                style={{ boxShadow: '0 10px 30px -5px rgba(12, 175, 96, 0.1)' }}
+                className="relative group overflow-hidden rounded-lg shadow-md cursor-pointer transform transition-all duration-300 hover:shadow-lg"
+                style={{ boxShadow: '0 8px 20px -5px rgba(12, 175, 96, 0.08)' }}
                 onClick={() => openLightbox(thumbnail)}
               >
                 {/* Category tag - keeping only this */}
@@ -178,9 +178,12 @@ const PortfolioSection = () => {
                   <img 
                     src={thumbnail.imageUrl} 
                     alt={thumbnail.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                   />
                 </div>
+                
+                {/* Subtle hover overlay */}
+                <div className="absolute inset-0 bg-[#0CAF60] opacity-0 group-hover:opacity-10 transition-opacity duration-300 ease-in-out"></div>
               </motion.div>
             ))}
           </div>
@@ -198,7 +201,8 @@ const PortfolioSection = () => {
             <motion.div 
               key={index}
               variants={fadeIn('up', 'tween', index * 0.05, 0.5)}
-              className="relative group overflow-hidden rounded-lg shadow-md cursor-pointer"
+              className="relative group overflow-hidden rounded-lg shadow-md cursor-pointer transform transition-all duration-300 hover:shadow-lg"
+              style={{ boxShadow: '0 8px 20px -5px rgba(12, 175, 96, 0.08)' }}
               onClick={() => openLightbox(thumbnail)}
             >
               {/* Category tag - keeping only this */}
@@ -211,9 +215,12 @@ const PortfolioSection = () => {
                 <img 
                   src={thumbnail.imageUrl} 
                   alt={thumbnail.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                 />
               </div>
+              
+              {/* Subtle hover overlay */}
+              <div className="absolute inset-0 bg-[#0CAF60] opacity-0 group-hover:opacity-10 transition-opacity duration-300 ease-in-out"></div>
             </motion.div>
           ))}
         </motion.div>
