@@ -39,8 +39,8 @@ const Footer = () => {
               </a>
               {/* X (Twitter) Icon */}
               <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#0CAF60] transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M4 4l11.5 11.5M4 20l16-16" />
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
                 </svg>
               </a>
               {/* LinkedIn Icon */}
@@ -53,10 +53,8 @@ const Footer = () => {
               </a>
               {/* Behance Icon */}
               <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-[#0CAF60] transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M6 15h8"></path>
-                  <path d="M16.25 6H12a4 4 0 0 0 0 8h1a4 4 0 0 1 0 8h-4.25"></path>
-                  <line x1="10" y1="6" x2="10" y2="22"></line>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.5 6h-3v1h3v-1zm-6.5 5.5c0-1.24.964-2.5 2.5-2.5 1.5 0 2.5 1.5 2.5 2.5 0 2-1.5 2.5-2.5 2.5h-2.5V8.5h5V7.5h-6v8h3.271c2.041 0 3.729-1.729 3.729-4 0-2.24-1.75-4-4-4-2.2 0-4 1.8-4 4h2z" />
                 </svg>
               </a>
             </div>
