@@ -174,15 +174,19 @@ const VideoPlayerModal = ({ video, isOpen, onClose }: { video: VideoSample | nul
               onLoad={handleLoadedData}
             />
             
-            {/* Video info - only shown before playing */}
+            {/* Video info - completely hidden when playing unless hover */}
             <AnimatePresence>
-              {!isPlaying && (
+              {(!isPlaying || showControls) && (
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.2 }}
-                  className="absolute z-20 left-0 right-0 bottom-0 py-4 bg-gradient-to-t from-black to-transparent px-6 pointer-events-none"
+                  className={`absolute z-20 left-0 right-0 pointer-events-none ${
+                    isPlaying 
+                      ? 'bottom-20 py-2 bg-black bg-opacity-60' 
+                      : 'bottom-0 py-4 bg-gradient-to-t from-black to-transparent'
+                  } px-6`}
                 >
                   <h3 className="text-white text-lg md:text-xl font-bold">{video.title}</h3>
                   <div className="flex items-center mt-1">
