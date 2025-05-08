@@ -16,9 +16,9 @@ interface VideoSample {
 const videoSamples: VideoSample[] = [
   {
     id: 1,
-    title: "Gaming Montage",
-    thumbnailUrl: "https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=450",
-    videoUrl: "https://player.vimeo.com/external/194837908.sd.mp4?s=c350076905b78c67f74d7ee39fdb4fef01d12420&profile_id=164",
+    title: "Gaming Highlight",
+    thumbnailUrl: "https://img.youtube.com/vi/8r_ap3t49FY/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/8r_ap3t49FY",
     duration: "3:45",
     category: "Gaming"
   },
