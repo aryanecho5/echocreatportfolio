@@ -121,7 +121,6 @@ const PortfolioSection = () => {
         backgroundImage: 'linear-gradient(to right, rgba(12, 175, 96, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(12, 175, 96, 0.05) 1px, transparent 1px)',
         backgroundSize: '40px 40px'
       }}></div>
-      
       <div className="max-w-7xl mx-auto relative">
         {/* Section header */}
         <motion.div 
