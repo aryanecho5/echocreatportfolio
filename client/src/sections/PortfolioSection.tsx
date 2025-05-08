@@ -168,18 +168,9 @@ const PortfolioSection = () => {
                 style={{ boxShadow: '0 10px 30px -5px rgba(12, 175, 96, 0.1)' }}
                 onClick={() => openLightbox(thumbnail)}
               >
-                {/* Category tag */}
+                {/* Category tag - keeping only this */}
                 <div className="absolute top-4 left-4 z-10 bg-black bg-opacity-70 text-white text-xs font-bold px-3 py-1 rounded-full">
                   {thumbnail.category}
-                </div>
-                
-                {/* Views counter */}
-                <div className="absolute top-4 right-4 z-10 bg-black bg-opacity-70 text-white text-xs font-medium px-3 py-1 rounded-full flex items-center gap-1">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                  </svg>
-                  {thumbnail.views} views
                 </div>
                 
                 {/* Image */}
@@ -189,31 +180,6 @@ const PortfolioSection = () => {
                     alt={thumbnail.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                </div>
-                
-                {/* Title overlay */}
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
-                  <h3 className="text-white text-lg font-bold">{thumbnail.title}</h3>
-                </div>
-                
-                {/* Hover overlay */}
-                <div className="absolute inset-0 bg-[#0CAF60] opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
-                
-                {/* Action button */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <button 
-                    className="bg-white text-[#0CAF60] rounded-full py-2 px-4 font-medium text-sm flex items-center gap-2 opacity-0 group-hover:opacity-100 transform translate-y-8 group-hover:translate-y-0 transition-all duration-300"
-                    onClick={(e) => {
-                      e.stopPropagation(); // Prevent triggering parent's onClick
-                      openLightbox(thumbnail);
-                    }}
-                  >
-                    View Full Size
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="m15 15 6 6m0-6-6 6"></path>
-                      <path d="M13.5 6.5 21 14m0 0-7.5 7.5M21 14l-7.5-7.5"></path>
-                    </svg>
-                  </button>
                 </div>
               </motion.div>
             ))}
@@ -235,7 +201,7 @@ const PortfolioSection = () => {
               className="relative group overflow-hidden rounded-lg shadow-md cursor-pointer"
               onClick={() => openLightbox(thumbnail)}
             >
-              {/* Category tag */}
+              {/* Category tag - keeping only this */}
               <div className="absolute top-2 left-2 z-10 bg-black bg-opacity-70 text-white text-xs px-2 py-0.5 rounded-full">
                 {thumbnail.category}
               </div>
@@ -248,21 +214,6 @@ const PortfolioSection = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
-              
-              {/* Title overlay */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-3">
-                <h3 className="text-white text-sm font-bold">{thumbnail.title}</h3>
-                <div className="flex items-center gap-1 text-white text-xs opacity-80">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                  </svg>
-                  {thumbnail.views}
-                </div>
-              </div>
-              
-              {/* Hover overlay */}
-              <div className="absolute inset-0 bg-[#0CAF60] opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
             </motion.div>
           ))}
         </motion.div>
@@ -316,18 +267,12 @@ const PortfolioSection = () => {
                 <X size={24} />
               </button>
               
-              {/* Lightbox image */}
+              {/* Lightbox image - without caption */}
               <img 
                 src={selectedImage.imageUrl} 
                 alt={selectedImage.title} 
                 className="max-h-[80vh] mx-auto" 
               />
-              
-              {/* Caption */}
-              <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4">
-                <h3 className="text-xl font-bold">{selectedImage.title}</h3>
-                <p className="text-sm opacity-75">{selectedImage.category} • {selectedImage.views} views</p>
-              </div>
             </motion.div>
           </motion.div>
         )}

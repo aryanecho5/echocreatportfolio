@@ -51,8 +51,31 @@ const Navbar = () => {
   };
 
   // Initialize and run handleScroll once when component mounts to set initial active section
+  // Close menu when clicking outside
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    
+    const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      // If the menu is open and click is outside the menu and not on the toggle button
+      if (isMenuOpen && !target.closest('.mobile-menu') && !target.closest('.menu-toggle')) {
+        setIsMenuOpen(false);
+      }
+    };
+    
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, [isMenuOpen]);
+
   useEffect(() => {
     const handleScroll = () => {
+      // Close menu on scroll
+      if (isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+      
       // Update scrolled state
       setScrolled(window.scrollY > 20);
       
@@ -177,7 +200,7 @@ const Navbar = () => {
                     <span className={`${activeItem === item.name ? 'text-[#0CAF60] font-semibold' : 'hover:text-[#0CAF60]'}`}>
                       {item.name}
                     </span>
-                    {activeItem === item.name && (
+                    {activeItem === item.name && item.name !== "Software" && item.name !== "Testimonials" && (
                       <motion.span
                         className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#0CAF60]"
                         layoutId="underline"
@@ -201,7 +224,7 @@ const Navbar = () => {
           >
             <motion.button 
               onClick={toggleMenu} 
-              className="text-gray-800 hover:text-[#0CAF60] transition-colors duration-300" 
+              className="text-gray-800 hover:text-[#0CAF60] transition-colors duration-300 menu-toggle" 
               aria-label="Toggle menu"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -225,7 +248,7 @@ const Navbar = () => {
           duration: 0.4,
           ease: [0.22, 1, 0.36, 1]
         }}
-        className="md:hidden bg-white shadow-md overflow-hidden"
+        className="md:hidden bg-white shadow-md overflow-hidden mobile-menu"
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {navItems.map((item) => (
