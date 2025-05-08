@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 const navItems = [
@@ -18,28 +18,32 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Function to handle navigation item clicks
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, itemName: string) => {
+    e.preventDefault();
+    setActiveItem(itemName);
+    
+    // Get the corresponding href for the clicked item
+    const targetItem = navItems.find(item => item.name === itemName);
+    if (!targetItem) return;
+    
+    // Scroll to the target element
+    const targetId = targetItem.href.substring(1);
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth' });
+    }
+    
+    // Close the mobile menu if it's open
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-
-      // Simple implementation to avoid TS errors - update active menu based on scroll position
-      const scrollPosition = window.scrollY;
-      
-      if (scrollPosition < 500) {
-        setActiveItem('Home');
-      } else if (scrollPosition < 1000) {
-        setActiveItem('Thumbnails');
-      } else if (scrollPosition < 1500) {
-        setActiveItem('Videos');
-      } else if (scrollPosition < 2000) {
-        setActiveItem('About');
-      } else {
-        setActiveItem('Contact');
-      }
+      // Update scrolled state
+      setScrolled(window.scrollY > 20);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -71,7 +75,11 @@ const Navbar = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <a href="#" className="flex items-center">
+            <a 
+              href="#hero" 
+              className="flex items-center"
+              onClick={(e) => handleNavClick(e, "Home")}
+            >
               <motion.div 
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -98,17 +106,7 @@ const Navbar = () => {
                   <a
                     href={item.href}
                     className="relative px-2 py-4 text-gray-800 font-medium transition-colors duration-300"
-                    onClick={(e) => {
-                      // Prevent auto-scroll from changing the active item
-                      e.preventDefault();
-                      setActiveItem(item.name);
-                      // After setting the active item, smoothly scroll to the target section
-                      const targetId = item.href.substring(1);
-                      const targetElement = document.getElementById(targetId);
-                      if (targetElement) {
-                        targetElement.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
+                    onClick={(e) => handleNavClick(e, item.name)}
                   >
                     <span className={`${activeItem === item.name ? 'text-[#0CAF60] font-semibold' : 'hover:text-[#0CAF60]'}`}>
                       {item.name}
@@ -169,17 +167,7 @@ const Navbar = () => {
               key={item.name}
               href={item.href} 
               className={`block px-3 py-2 rounded-md ${activeItem === item.name ? 'bg-gray-50 text-[#0CAF60] font-medium' : 'text-gray-800 hover:text-[#0CAF60]'} transition-colors duration-300`}
-              onClick={(e) => {
-                e.preventDefault();
-                setActiveItem(item.name);
-                setIsMenuOpen(false);
-                // After setting the active item, smoothly scroll to the target section
-                const targetId = item.href.substring(1);
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                  targetElement.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
+              onClick={(e) => handleNavClick(e, item.name)}
               whileHover={{ x: 5 }}
               whileTap={{ scale: 0.95 }}
             >

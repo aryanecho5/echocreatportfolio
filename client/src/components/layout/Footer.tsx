@@ -64,11 +64,26 @@ const Footer = () => {
           >
             <h4 className="font-bold text-lg mb-4">Services</h4>
             <ul className="space-y-2">
-              <li><a href="#portfolio" className="text-gray-600 hover:text-[#0CAF60] transition-colors duration-300">Thumbnail Design</a></li>
-              <li><a href="#video" className="text-gray-600 hover:text-[#0CAF60] transition-colors duration-300">Video Editing</a></li>
-              <li><a href="#video" className="text-gray-600 hover:text-[#0CAF60] transition-colors duration-300">Motion Graphics</a></li>
-              <li><a href="#software" className="text-gray-600 hover:text-[#0CAF60] transition-colors duration-300">3D Animation</a></li>
-              <li><a href="#contact" className="text-gray-600 hover:text-[#0CAF60] transition-colors duration-300">Custom Projects</a></li>
+              <li><a href="#portfolio" onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('portfolio')?.scrollIntoView({behavior: 'smooth'});
+              }} className="text-gray-600 hover:text-[#0CAF60] transition-colors duration-300">Thumbnail Design</a></li>
+              <li><a href="#video" onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('video')?.scrollIntoView({behavior: 'smooth'});
+              }} className="text-gray-600 hover:text-[#0CAF60] transition-colors duration-300">Video Editing</a></li>
+              <li><a href="#video" onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('video')?.scrollIntoView({behavior: 'smooth'});
+              }} className="text-gray-600 hover:text-[#0CAF60] transition-colors duration-300">Motion Graphics</a></li>
+              <li><a href="#software" onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('software')?.scrollIntoView({behavior: 'smooth'});
+              }} className="text-gray-600 hover:text-[#0CAF60] transition-colors duration-300">3D Animation</a></li>
+              <li><a href="#contact" onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'});
+              }} className="text-gray-600 hover:text-[#0CAF60] transition-colors duration-300">Custom Projects</a></li>
             </ul>
           </motion.div>
           
@@ -81,11 +96,20 @@ const Footer = () => {
           >
             <h4 className="font-bold text-lg mb-4">Company</h4>
             <ul className="space-y-2">
-              <li><a href="#about" className="text-gray-600 hover:text-[#0CAF60] transition-colors duration-300">About Us</a></li>
-              <li><a href="#testimonials" className="text-gray-600 hover:text-[#0CAF60] transition-colors duration-300">Testimonials</a></li>
+              <li><a href="#about" onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('about')?.scrollIntoView({behavior: 'smooth'});
+              }} className="text-gray-600 hover:text-[#0CAF60] transition-colors duration-300">About Us</a></li>
+              <li><a href="#testimonials" onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('testimonials')?.scrollIntoView({behavior: 'smooth'});
+              }} className="text-gray-600 hover:text-[#0CAF60] transition-colors duration-300">Testimonials</a></li>
               <li><a href="#" className="text-gray-600 hover:text-[#0CAF60] transition-colors duration-300">Privacy Policy</a></li>
               <li><a href="#" className="text-gray-600 hover:text-[#0CAF60] transition-colors duration-300">Terms of Service</a></li>
-              <li><a href="#contact" className="text-gray-600 hover:text-[#0CAF60] transition-colors duration-300">Contact</a></li>
+              <li><a href="#contact" onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'});
+              }} className="text-gray-600 hover:text-[#0CAF60] transition-colors duration-300">Contact</a></li>
             </ul>
           </motion.div>
         </div>
