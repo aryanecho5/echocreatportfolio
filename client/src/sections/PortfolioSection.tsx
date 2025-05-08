@@ -53,7 +53,7 @@ const thumbnailsGrid = [
   },
   {
     category: 'Educational',
-    imageUrl: 'https://media-hosting.imagekit.io/35e27a24700143cb/JHFVCXZ.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=wBACS7tn4PV1ro39p67rSNfgFhpjO3dPAGlLMBafUyUHvrMOfsLyplXCZbeS8ktTINlQ-0pAfBbdg2TCZ8nP8YDx2U3Y1Y6Z7QAxBh0K9q~YOk96UWsn1vMBaKMxCiZVuavqC3TPFF065DQBzUhd68g9j9ZwcPtVjzLOiHcAkRF6AUtSS2TbHSBHByt1K0Q07mleQLl09TaTc4~Uoz77vV-s-gR~vHUfq~8dct~MwvQYyVkflmE6RCe2pMduyTrc-x~YUIu0Lqba5h79xBUk2XVDaf9EKBxxi0ZV7IS6bOuRmap1iMMYAw-no3JJoOgQfDkXAWGUKLsR5uGhTQoZxw__',
+    imageUrl: 'https://media-hosting.imagekit.io/f4d0a5348b1f4173/xzxs.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=XzkSIA33GTguW~ykCcT3WRSnnfMwlyU3yR06kBchES-pYcLtLtznRMwRt3S8fZ2UdeVUb4e76XfLcBB2BgZvYQpf6--lu2vM1mNtFzRp24CmZjmJSq1Ju~EkSPwgbahFlxpTiS2SbDP1nDVvvIMg9meFvzyEzw6AXZ2fruJWmBUObrSQ6RtY6NpuCBb2QKsJS0UT9I74lDmfSdVkYub0iA22MQrUvfTse4D4zMQ8~6rsjNgsXNKfANoMRVmIuKO-8A-RKBqgA-cHibfN~c1TGXQcujB9LlxG4Xs9AmBgNmMt2DfSsOjEXBtS9KdQH-GN1-tWxJO8W5KMF7PhiOAr9w__',
     title: 'Learning to Code',
     views: '1.5M'
   },
