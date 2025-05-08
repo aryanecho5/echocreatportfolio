@@ -57,7 +57,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="font-bold">Phone</h4>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
+                    <p className="text-gray-600">+91 9352182077, +91 9166305573</p>
                   </div>
                 </div>
                 
@@ -77,13 +77,13 @@ const ContactSection = () => {
                 <div className="flex items-start gap-4">
                   <div className="bg-[rgba(12,175,96,0.1)] p-3 rounded-full text-[#0CAF60]">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                      <circle cx="12" cy="10" r="3"></circle>
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-bold">Location</h4>
-                    <p className="text-gray-600">123 Creative Ave, San Francisco, CA 94103</p>
+                    <h4 className="font-bold">Business Hours</h4>
+                    <p className="text-gray-600">Mon–Sat, 7 AM – 9 PM</p>
                   </div>
                 </div>
               </div>
@@ -104,6 +104,28 @@ const ContactSection = () => {
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+                </a>
+                {/* X (Twitter) Icon */}
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="bg-[rgba(12,175,96,0.1)] p-3 rounded-full text-[#0CAF60] hover:bg-[#0CAF60] hover:text-white transition-colors duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 4l11.5 11.5M4 20l16-16" />
+                  </svg>
+                </a>
+                {/* LinkedIn Icon */}
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="bg-[rgba(12,175,96,0.1)] p-3 rounded-full text-[#0CAF60] hover:bg-[#0CAF60] hover:text-white transition-colors duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                </a>
+                {/* Behance Icon */}
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="bg-[rgba(12,175,96,0.1)] p-3 rounded-full text-[#0CAF60] hover:bg-[#0CAF60] hover:text-white transition-colors duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M6 15h8"></path>
+                    <path d="M16.25 6H12a4 4 0 0 0 0 8h1a4 4 0 0 1 0 8h-4.25"></path>
+                    <line x1="10" y1="6" x2="10" y2="22"></line>
                   </svg>
                 </a>
               </div>
