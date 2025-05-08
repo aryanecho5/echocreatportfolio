@@ -65,7 +65,7 @@ const thumbnailsGrid = [
   },
   {
     category: 'Food',
-    imageUrl: 'https://media-hosting.imagekit.io/3086b2be677c4791/KMJNBHGVF.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=U1dqdSlDdMgrmlnouPcnd~dmIX~ZkY1FkTIRcBbcaTeHjEbupfNYHxIxo9WESzymidecPnDT0J-7gVoeefFdlIhekX8bs2DbEAnZ8P6yiMKNeTttiLERhjCXkHa4-Wp5VD4UhlNu5uFsH0pzVeaottNkv4ifjCQiAYLrByHLHjriqHcFUsBtUuUrbUaVi0U11Cs4PiLlbypADj6b~ztkAQm-3Fja7U9o9TtMts~aRz7WhgS~lhFuvOiGoAUWcFe4s6uZX3bLeyjgP2Q5RLwFv4CbkvOksxH1-UimIYHmkOILLYcdTwU7m-IWWAkC9Csa4qkbmX~v5Sxxug-vrWkkgw__',
+    imageUrl: 'https://media-hosting.imagekit.io/dc295cd1980e40ed/jrfdf_page-0001%20copy.png?Expires=1841326241&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=oXkOL1SEK1kIF0~GHZ9zTZsLwbd-Z3He4VeBarfEpc66fnOem1bxU48BuSp-Xlk-xrLLJXIN6XancOUwvi3xaCR5uqkaoFnrSo7zgCAjmWDaviClzC0TDbNYUNMhQpvvwa4gE73Yikbu7NgB84UgyVbacl2D41eaB1tzw~yO4TtPZqFeWWgLWP9LFhMr0YLyFFLQ67fDPfEpXc3AWyl6V-ZWEGrTXICzLd6GtifoukCUmweNLT1MObq9xlB2uErrubDvZS1qs9zdbWAUGO63mmLXg8wSOhtdT~8Soa1ofJnOsQ26lK~rHY6vFmDVWxYYtWCFMX948Ub5Hd-aJUjocg__',
     title: 'Gourmet Pizza',
     views: '678K'
   },
