@@ -34,43 +34,43 @@ const thumbnailsGrid = [
     views: '1.2M'
   },
   {
-    category: 'Tech',
+    category: 'Gaming',
     imageUrl: 'https://media-hosting.imagekit.io/cc148e29fbe84a86/tanisq%20best%20copy.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=BOpTC2AIgEEk4MLNUb3zM2pCMy1o~~2oflszVIZ4lrbcp9GcO-dS8tvjZxO8Otft83BQXX4Ad2sMzO00~cRAFRJG1zxpK2mqV5AhDm1Cccefxx34Dqz0QST7bcB64XTfI4Wv-dndc8BtbsgK8iYU3DDs~w03NeFrCdwOaOfNlt~LL-cWUfIHKFksTbqIc3eY1elPtP2DzERT6wBt1Dr8glT~G7kkIgBJVuHjBKNFeI6yFx5RppReTDNQ856nUcOT3w1dcEELXhP8Y0-8OX8U17TtW9cDs-19uQdx7Xhx6iDHUiLE3MaBiXqylte2xS2vA9oaIjIiFldiBU~Dg~BC7g__',
     title: 'AI Future Trends',
     views: '845K'
   },
   {
-    category: 'Cinematic',
+    category: 'Gaming',
     imageUrl: 'https://media-hosting.imagekit.io/24c45c53842146f0/efh_20250406015220_3911199_11cd8_698fb.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=q4t7qv~B5-O2KYMxG8dMxUWSmX7X55-P-b9chDFU4Dsb0DcbAkZ4PlxxXSnl6a0qubfq3rKGwcqZCzE9xAxg9ZX4~LuffTIgh7TA9sMM7GEWZ56C4Du7xmcvLARYS2CmxvhTRPe6~lG1uRIHAG-qznSPV-r5bx~3XH2H8yFx-X~m5K9BTuwZEIS4o4UXtsxADQmX95wubXog9aZvGv1futsmfz96gxGRsy9Ds-RMVAdLwWms7GDGXcgigTtx2zWTJORgsMSfeNXaSU4OoWRNjAJunYgbftVHcad~tkTCOMx2xlZmxVSYWzU~d5yamB6PDsUVXCXJXrpWK3PJhWCTOA__',
     title: 'Night City Vibes',
     views: '2.3M'
   },
   {
-    category: 'Lifestyle',
+    category: 'Gaming',
     imageUrl: 'https://media-hosting.imagekit.io/3086b2be677c4791/KMJNBHGVF.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=U1dqdSlDdMgrmlnouPcnd~dmIX~ZkY1FkTIRcBbcaTeHjEbupfNYHxIxo9WESzymidecPnDT0J-7gVoeefFdlIhekX8bs2DbEAnZ8P6yiMKNeTttiLERhjCXkHa4-Wp5VD4UhlNu5uFsH0pzVeaottNkv4ifjCQiAYLrByHLHjriqHcFUsBtUuUrbUaVi0U11Cs4PiLlbypADj6b~ztkAQm-3Fja7U9o9TtMts~aRz7WhgS~lhFuvOiGoAUWcFe4s6uZX3bLeyjgP2Q5RLwFv4CbkvOksxH1-UimIYHmkOILLYcdTwU7m-IWWAkC9Csa4qkbmX~v5Sxxug-vrWkkgw__',
     title: 'Morning Routine',
     views: '987K'
   },
   {
-    category: 'Educational',
+    category: 'Gaming',
     imageUrl: 'https://media-hosting.imagekit.io/f4d0a5348b1f4173/xzxs.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=XzkSIA33GTguW~ykCcT3WRSnnfMwlyU3yR06kBchES-pYcLtLtznRMwRt3S8fZ2UdeVUb4e76XfLcBB2BgZvYQpf6--lu2vM1mNtFzRp24CmZjmJSq1Ju~EkSPwgbahFlxpTiS2SbDP1nDVvvIMg9meFvzyEzw6AXZ2fruJWmBUObrSQ6RtY6NpuCBb2QKsJS0UT9I74lDmfSdVkYub0iA22MQrUvfTse4D4zMQ8~6rsjNgsXNKfANoMRVmIuKO-8A-RKBqgA-cHibfN~c1TGXQcujB9LlxG4Xs9AmBgNmMt2DfSsOjEXBtS9KdQH-GN1-tWxJO8W5KMF7PhiOAr9w__',
     title: 'Learning to Code',
     views: '1.5M'
   },
   {
-    category: 'Travel',
+    category: 'Gaming',
     imageUrl: 'https://media-hosting.imagekit.io/951b61ac2c9540df/d.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zJrT~PSs7W03nIOK8K~p7CMaTTk1acI9ScZgkQSGaSp-6MDBSgPoOcRd6DXJl4BrOZiVvSpF-yS8dtXET5WP7GvqOhgg88Uxb96N4Vusa9h4nYqX~gmafQicgQ7w6xZVaJ2yj3D-9FRv2ZDPq6Yq7CraAXrbvja25A-1taaVhRgUTwO-QKR1c~GNyc9EX8BaqT5bp6GIZWZEX4ickT5GJmWTua0Rp-j0X5g5hpZSST651A13Y2jcIGv1KuC2nnC~06ftytvO~AZfVgXN40n3ae9bd5mSAWLfywcwQeBrVPw41GmdsoMGfSNJbIwHBXRt2W4PkvOJiD21Sr3DlWvU9w__',
     title: 'Exploring Japan',
     views: '3.1M'
   },
   {
-    category: 'Food',
+    category: 'Gaming',
     imageUrl: 'https://media-hosting.imagekit.io/dc295cd1980e40ed/jrfdf_page-0001%20copy.png?Expires=1841326241&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=oXkOL1SEK1kIF0~GHZ9zTZsLwbd-Z3He4VeBarfEpc66fnOem1bxU48BuSp-Xlk-xrLLJXIN6XancOUwvi3xaCR5uqkaoFnrSo7zgCAjmWDaviClzC0TDbNYUNMhQpvvwa4gE73Yikbu7NgB84UgyVbacl2D41eaB1tzw~yO4TtPZqFeWWgLWP9LFhMr0YLyFFLQ67fDPfEpXc3AWyl6V-ZWEGrTXICzLd6GtifoukCUmweNLT1MObq9xlB2uErrubDvZS1qs9zdbWAUGO63mmLXg8wSOhtdT~8Soa1ofJnOsQ26lK~rHY6vFmDVWxYYtWCFMX948Ub5Hd-aJUjocg__',
     title: 'Gourmet Pizza',
     views: '678K'
   },
   {
-    category: 'Music',
+    category: 'Gaming',
     imageUrl: 'https://media-hosting.imagekit.io/7dae7f879e094a39/ZSXDCFVGBNM.png?Expires=1841330708&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=HKN5fov2x9zs64yp0OiMyAx5u1dRu6UHrV-0KWFcFUzM7d5AnyUXG6Wm3L3OhbvwSifhSkcPVXtD1fNwDEmQ0mBHQCHsrUjru5Mui-UEXC2lpkLsL9w06oAx7VxEHu9tV3rViL3MaPUM3xdXKafD4l6qdu-9ZDVAYCCZyr4Na2dmPd~5k5BS5KB2SJkdXTqJ1I2ta9t0FvD50QY90Otg7g5cIcNvCeplQq2I5VZCUjsUhIXyMDW-EeAhnUv8Hhm27LFgJevd6niYQ82vAyeapH1xdzAah5pLYjdeTD98N0oKL58GuxpG~4O3tEGB3kBHr5~wc9jaiGmuFFfV7zg43A__',
     title: 'Studio Session',
     views: '1.4M'
