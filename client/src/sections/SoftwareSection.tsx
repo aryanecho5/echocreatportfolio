@@ -96,9 +96,6 @@ const SoftwareSection = () => {
               </div>
               <h3 className="font-bold text-lg mb-1">{tool.name}</h3>
               <p className={`text-gray-600 text-sm text-center ${tool.name === "Blender" ? "text-[#0CAF60]" : ""}`}>{tool.description}</p>
-              {tool.name === "Blender" && (
-                <span className="text-xs text-[#0CAF60] mt-1">(Click to view examples)</span>
-              )}
             </motion.div>
           ))}
         </motion.div>
