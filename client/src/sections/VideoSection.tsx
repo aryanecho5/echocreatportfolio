@@ -1,12 +1,14 @@
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { fadeIn, staggerContainer } from '@/lib/animation';
-import { Play } from 'lucide-react';
+import { Play, X } from 'lucide-react';
+import { useState, useRef, useEffect } from 'react';
 
-// Define video samples without descriptions
+// Define video samples with URLs
 interface VideoSample {
   id: number;
   title: string;
   thumbnailUrl: string;
+  videoUrl: string;
   duration: string;
   category: string;
 }
@@ -16,6 +18,7 @@ const videoSamples: VideoSample[] = [
     id: 1,
     title: "Gaming Montage",
     thumbnailUrl: "https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=450",
+    videoUrl: "https://player.vimeo.com/external/194837908.sd.mp4?s=c350076905b78c67f74d7ee39fdb4fef01d12420&profile_id=164",
     duration: "3:45",
     category: "Gaming"
   },
@@ -23,6 +26,7 @@ const videoSamples: VideoSample[] = [
     id: 2,
     title: "Motion Graphics Showcase",
     thumbnailUrl: "https://images.unsplash.com/photo-1535016120720-40c646be5580?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=450",
+    videoUrl: "https://player.vimeo.com/external/308912281.hd.mp4?s=70cdfc39fdb7b8f055a1347f59e78d239719e094&profile_id=175",
     duration: "2:15",
     category: "Animation"
   },
@@ -30,6 +34,7 @@ const videoSamples: VideoSample[] = [
     id: 3,
     title: "Cinematic Short Film",
     thumbnailUrl: "https://images.unsplash.com/photo-1536240478700-b869070f9279?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=450",
+    videoUrl: "https://player.vimeo.com/external/370467031.sd.mp4?s=32b3aa6857b283fee8d72cd04ee4140764c9da7e&profile_id=164",
     duration: "5:30",
     category: "Cinematic"
   },
@@ -37,12 +42,147 @@ const videoSamples: VideoSample[] = [
     id: 4,
     title: "Brand Promotion",
     thumbnailUrl: "https://images.unsplash.com/photo-1498075702571-ecb018f3752d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=450",
+    videoUrl: "https://player.vimeo.com/external/338683220.sd.mp4?s=c1c0e812feb2f8aa902c8365e2dd8656402a36c8&profile_id=165",
     duration: "1:45",
     category: "Commercial"
   }
 ];
 
+// Video modal component with player
+const VideoPlayerModal = ({ video, isOpen, onClose }: { video: VideoSample | null, isOpen: boolean, onClose: () => void }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  // Handle escape key to close the modal
+  useEffect(() => {
+    const handleEscKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('keydown', handleEscKey);
+      // Lock body scroll when modal is open
+      document.body.style.overflow = 'hidden';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscKey);
+      // Restore body scroll when modal is closed
+      document.body.style.overflow = '';
+    };
+  }, [isOpen, onClose]);
+
+  // Reset loading state when modal opens/closes
+  useEffect(() => {
+    if (isOpen) {
+      setIsLoading(true);
+    } else {
+      // Reset state when modal closes
+      setIsLoading(false);
+    }
+  }, [isOpen]);
+
+  // Handle video events
+  const handleLoadedData = () => {
+    setIsLoading(false);
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => {
+        console.error("Auto-play failed:", error);
+      });
+    }
+  };
+
+  if (!video) return null;
+
+  return (
+    <AnimatePresence>
+      {isOpen && (
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6"
+          style={{ backdropFilter: 'blur(5px)' }}
+        >
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black bg-opacity-90" onClick={onClose}></div>
+          
+          {/* Video container */}
+          <motion.div 
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            exit={{ scale: 0.9, opacity: 0 }}
+            transition={{ type: 'spring', duration: 0.5 }}
+            className="relative z-10 w-full max-w-5xl mx-auto aspect-video rounded-lg overflow-hidden shadow-2xl"
+          >
+            {/* Close button */}
+            <motion.button
+              onClick={onClose}
+              className="absolute top-4 right-4 z-20 rounded-full bg-black bg-opacity-70 p-2 text-white hover:bg-opacity-90 hover:text-[#0CAF60] transition-all"
+              whileHover={{ scale: 1.1, backgroundColor: 'rgba(0, 0, 0, 0.9)' }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <X size={24} />
+            </motion.button>
+            
+            {/* Loading spinner */}
+            {isLoading && (
+              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">
+                <div className="w-16 h-16 border-4 border-[#0CAF60] border-t-transparent rounded-full animate-spin"></div>
+              </div>
+            )}
+            
+            {/* Video player */}
+            <video 
+              ref={videoRef}
+              src={video.videoUrl} 
+              className="w-full h-full object-contain bg-black" 
+              controls 
+              onLoadedData={handleLoadedData}
+              controlsList="nodownload"
+              playsInline
+            />
+            
+            {/* Video info */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3 }}
+              className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent py-4 px-6"
+            >
+              <h3 className="text-white text-lg md:text-xl font-bold">{video.title}</h3>
+              <div className="flex items-center mt-1">
+                <span className="text-[#0CAF60] text-sm mr-3">{video.category}</span>
+                <span className="text-gray-300 text-sm">{video.duration}</span>
+              </div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+};
+
 const VideoSection = () => {
+  const [selectedVideo, setSelectedVideo] = useState<VideoSample | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openVideoModal = (video: VideoSample) => {
+    setSelectedVideo(video);
+    setIsModalOpen(true);
+  };
+
+  const closeVideoModal = () => {
+    setIsModalOpen(false);
+    // Small delay to allow exit animation to finish
+    setTimeout(() => {
+      setSelectedVideo(null);
+    }, 300);
+  };
+
   return (
     <section id="video" className="py-24 px-4 bg-gray-50 relative">
       {/* Background pattern */}
@@ -50,6 +190,13 @@ const VideoSection = () => {
         backgroundImage: 'linear-gradient(to right, rgba(12, 175, 96, 0.05) 1px, transparent 1px), linear-gradient(to bottom, rgba(12, 175, 96, 0.05) 1px, transparent 1px)',
         backgroundSize: '40px 40px'
       }}></div>
+      
+      {/* Video player modal */}
+      <VideoPlayerModal
+        video={selectedVideo}
+        isOpen={isModalOpen}
+        onClose={closeVideoModal}
+      />
       
       <div className="max-w-7xl mx-auto relative">
         {/* Section header */}
@@ -92,10 +239,13 @@ const VideoSection = () => {
             <motion.div 
               key={video.id}
               variants={fadeIn('up', 'tween', index * 0.1, 0.6)}
-              className="video-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform duration-500"
+              className="video-card bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform duration-500 group hover:shadow-xl"
               style={{ boxShadow: '0 10px 30px -5px rgba(12, 175, 96, 0.1)' }}
             >
-              <div className="relative h-56 md:h-72 overflow-hidden">
+              <div 
+                className="relative h-56 md:h-72 overflow-hidden cursor-pointer"
+                onClick={() => openVideoModal(video)}
+              >
                 {/* Category tag */}
                 <div className="absolute top-4 left-4 z-10 bg-black bg-opacity-70 text-white text-xs font-bold px-3 py-1 rounded-full">
                   {video.category}
@@ -109,7 +259,7 @@ const VideoSection = () => {
                 <img 
                   src={video.thumbnailUrl} 
                   alt={`${video.title} thumbnail`} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -124,7 +274,7 @@ const VideoSection = () => {
                 </div>
                 
                 {/* Hover overlay */}
-                <div className="absolute inset-0 bg-[#0CAF60] opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-30 transition-opacity duration-300"></div>
               </div>
               
               <div className="p-6">
