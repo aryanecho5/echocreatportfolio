@@ -83,7 +83,7 @@ const AboutSection = () => {
             <div className="absolute -inset-3 border-2 border-[#0CAF60] rounded-xl opacity-20"></div>
             <div className="relative overflow-hidden rounded-xl shadow-lg">
               <img 
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&h=600" 
+                src="https://media-hosting.imagekit.io/435edc514a644ce5/gvcdf.png?Expires=1841273947&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=l7WYOBQvsK7vFp-gJe2UDEMbT-P-Q5C4GAQFlTow-g52G1ml9oeokCjUt7416yPLKwKcnzHGONmzzzQAPjmZfqK5DMo52BUnjlmJ2Vv4DMIFpqOUh02OVnlD5Q8ft1akARnNh1VIK0OqA9HDnZDpIkLGSCvoUjGxLG-fdykTsK0gOwaezwhMXrzKfNNITp424wI6bbOLHadypc-6PfDye3C2xLa-6HZgmKcHgd4e9eptI~6jSmBTbAiuWfffZKAdqcPymOfPegaI9BEb~lUA7CftQAiiQmy-AFEkNpNXPtjAcAv-W-0D63R1xNh8Qk6hVCDrC7md~ak263VgxuZc3w__" 
                 alt="Echo Creates team working on creative projects" 
                 className="w-full h-auto object-cover rounded-xl"
               />
