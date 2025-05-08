@@ -47,7 +47,7 @@ const thumbnailsGrid = [
   },
   {
     category: 'Lifestyle',
-    imageUrl: 'https://media-hosting.imagekit.io/2465487260cd4877/Untitled-1.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=q3PS6WGVrSPK~qtxlGMheLgtSeG5mQsFibEi5RWMVG0HtTP0cpgej0iCAXS4mWEXBnUuL23GEHVzlrZF54dsSIT2cISP1k~HSOtCgrEqozTEDpareU-nJdEnTkaJ08YWYLUzSzrpHeh5Hqtd6A-DIV79zcM2vT8nQGmYq5wZfdbvA2CDdorcWI5B0DbSixvIPzAP1q76EthxYgB6Qc7-3paJSZpOdurO7pY~CMAJVQclYTxX3vqzAZwVAWTOI~q87KUg102FXWQJ~pbo0RpsDTCmeeCr7tLloOGz2ss3sEjlLYTNKy6W7IH4HW2YWd2coh4z9vF-rkBXcC17yPQeGQ__',
+    imageUrl: 'https://media-hosting.imagekit.io/3086b2be677c4791/KMJNBHGVF.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=U1dqdSlDdMgrmlnouPcnd~dmIX~ZkY1FkTIRcBbcaTeHjEbupfNYHxIxo9WESzymidecPnDT0J-7gVoeefFdlIhekX8bs2DbEAnZ8P6yiMKNeTttiLERhjCXkHa4-Wp5VD4UhlNu5uFsH0pzVeaottNkv4ifjCQiAYLrByHLHjriqHcFUsBtUuUrbUaVi0U11Cs4PiLlbypADj6b~ztkAQm-3Fja7U9o9TtMts~aRz7WhgS~lhFuvOiGoAUWcFe4s6uZX3bLeyjgP2Q5RLwFv4CbkvOksxH1-UimIYHmkOILLYcdTwU7m-IWWAkC9Csa4qkbmX~v5Sxxug-vrWkkgw__',
     title: 'Morning Routine',
     views: '987K'
   },
