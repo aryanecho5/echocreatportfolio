@@ -166,17 +166,12 @@ const VideoPlayerModal = ({ video, isOpen, onClose }: { video: VideoSample | nul
             )}
             
             {/* Video player */}
-            <video 
-              ref={videoRef}
-              src={video.videoUrl} 
-              className="w-full h-full object-contain bg-black" 
-              controls 
-              onLoadedData={handleLoadedData}
-              onPlay={handlePlay}
-              onPause={handlePause}
-              onEnded={handleEnded}
-              controlsList="nodownload"
-              playsInline
+            <iframe
+              src={video.videoUrl}
+              className="w-full h-full"
+              allowFullScreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              onLoad={handleLoadedData}
             />
             
             {/* Video info - completely hidden when playing unless hover */}
