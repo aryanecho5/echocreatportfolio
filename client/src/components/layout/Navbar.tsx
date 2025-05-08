@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 const navItems = [
@@ -9,10 +9,15 @@ const navItems = [
   { name: "Contact", href: "#contact" }
 ];
 
+// Define sections where the underline should disappear
+const sectionsWithoutUnderline = ["software", "testimonials"];
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeItem, setActiveItem] = useState("Home");
+  const [currentSection, setCurrentSection] = useState<string | null>(null);
+  const [showUnderline, setShowUnderline] = useState(true);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -86,8 +91,34 @@ const Navbar = () => {
         return { id, element, name: item.name };
       }).filter(item => item.element !== null);
       
+      // Also check for special sections that should hide the underline
+      const softwareSection = document.getElementById('software');
+      const testimonialsSection = document.getElementById('testimonials');
+      
       // Calculate which section is currently in view
       const scrollPosition = window.scrollY + 100; // Add offset to account for header height
+      
+      // Check if we're in a special section that should hide the underline
+      let inSpecialSection = false;
+      
+      if (softwareSection) {
+        const sectionTop = getOffsetTop(softwareSection) - 120;
+        const sectionBottom = sectionTop + softwareSection.offsetHeight;
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          inSpecialSection = true;
+        }
+      }
+      
+      if (testimonialsSection) {
+        const sectionTop = getOffsetTop(testimonialsSection) - 120;
+        const sectionBottom = sectionTop + testimonialsSection.offsetHeight;
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          inSpecialSection = true;
+        }
+      }
+      
+      // Update the underline visibility with an animation
+      setShowUnderline(!inSpecialSection);
       
       // Check if we're at the top of the page (home section)
       if (scrollPosition < 300) {
@@ -118,6 +149,9 @@ const Navbar = () => {
           if (activeNavItem && activeNavItem.name !== activeItem) {
             setActiveItem(activeNavItem.name);
           }
+          
+          // Update the current section
+          setCurrentSection(section.id);
           return;
         }
       }
@@ -129,6 +163,7 @@ const Navbar = () => {
         if (activeNavItem && activeNavItem.name !== activeItem) {
           setActiveItem(activeNavItem.name);
         }
+        setCurrentSection(lastSection.id);
       }
     };
 
@@ -139,7 +174,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [activeItem]);
+  }, [activeItem, isMenuOpen, showUnderline]);
 
   return (
     <motion.header 
@@ -200,13 +235,13 @@ const Navbar = () => {
                     <span className={`${activeItem === item.name ? 'text-[#0CAF60] font-semibold' : 'hover:text-[#0CAF60]'}`}>
                       {item.name}
                     </span>
-                    {activeItem === item.name && item.name !== "Software" && item.name !== "Testimonials" && (
+                    {activeItem === item.name && (
                       <motion.span
                         className="absolute -bottom-1 left-0 w-full h-0.5 bg-[#0CAF60]"
                         layoutId="underline"
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.3 }}
+                        animate={{ opacity: showUnderline ? 1 : 0 }}
+                        transition={{ duration: 0.4 }}
                       />
                     )}
                   </a>
