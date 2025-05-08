@@ -19,7 +19,7 @@ const featuredThumbnails = [
   },
   {
     category: 'Cinematic',
-    imageUrl: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&h=450',
+    imageUrl: 'https://media-hosting.imagekit.io/2465487260cd4877/Untitled-1.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=q3PS6WGVrSPK~qtxlGMheLgtSeG5mQsFibEi5RWMVG0HtTP0cpgej0iCAXS4mWEXBnUuL23GEHVzlrZF54dsSIT2cISP1k~HSOtCgrEqozTEDpareU-nJdEnTkaJ08YWYLUzSzrpHeh5Hqtd6A-DIV79zcM2vT8nQGmYq5wZfdbvA2CDdorcWI5B0DbSixvIPzAP1q76EthxYgB6Qc7-3paJSZpOdurO7pY~CMAJVQclYTxX3vqzAZwVAWTOI~q87KUg102FXWQJ~pbo0RpsDTCmeeCr7tLloOGz2ss3sEjlLYTNKy6W7IH4HW2YWd2coh4z9vF-rkBXcC17yPQeGQ__',
     title: 'Night City Vibes',
     views: '2.3M'
   }
