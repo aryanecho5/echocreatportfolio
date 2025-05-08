@@ -7,7 +7,7 @@ import { X } from 'lucide-react';
 const featuredThumbnails = [
   {
     category: 'Gaming',
-    imageUrl: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&h=450',
+    imageUrl: 'https://media-hosting.imagekit.io/e0893302c10446bf/dcxdx%20copy.png?Expires=1841324763&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=MTOYTX~HtfZsnChdb7-hHG6~slIMhDw2HApj95c1DPnBFdjRigZBEzSiovDCJgxf2kywO-iIsYc8g~oyQmFcoWAYAk0itj4TZvcNsG5bgWNp7ebmBPpBsSXdMxP9GzDrbnCc2X0FVODpTtOE1-PvJdsK3CpHld8nLpOwlogEF7BbHEDs2FuU7Ecpth~jLXYV-QsBJkFe6y4sm6drVPMvR8qF06qEp07Cw~20X7nECXkQmgkU7V9RrR-WaK3nAfUVmsKZV1Slp3~rg1ktQkHu3h0Ay0Jbmb5wPnHjI6-BkIzdS988sQW~8wJmvVamp7RJNdhJKOhbdgnhBHsSGm9ixA__',
     title: 'Fortnite Season X',
     views: '1.2M'
   },
