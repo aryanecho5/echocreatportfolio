@@ -7,28 +7,25 @@ const softwareTools = [
     name: 'Photoshop',
     description: 'Image Editing',
     color: '#31A8FF',
-    abbreviation: 'Ps'
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/240px-Adobe_Photoshop_CC_icon.svg.png'
   },
   {
     name: 'Premiere Pro',
     description: 'Video Editing',
     color: '#EA77FF',
-    abbreviation: 'Pr'
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Adobe_Premiere_Pro_CC_icon.svg/240px-Adobe_Premiere_Pro_CC_icon.svg.png'
   },
   {
     name: 'After Effects',
     description: 'Motion Graphics',
     color: '#9999FF',
-    abbreviation: 'Ae'
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Adobe_After_Effects_CC_icon.svg/240px-Adobe_After_Effects_CC_icon.svg.png'
   },
   {
     name: 'Blender',
     description: '3D Graphics',
     color: '#F5792A',
-    abbreviation: 
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-        <path d="M12 5c-1.93 0-3.5 1.57-3.5 3.5 0 .59.15 1.15.41 1.65l-5.83 5.83 2.12 2.12 5.83-5.83c.5.26 1.06.41 1.65.41 1.93 0 3.5-1.57 3.5-3.5S13.93 5 12 5z"/>
-      </svg>
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Blender_logo_no_text.svg/240px-Blender_logo_no_text.svg.png'
   }
 ];
 
@@ -84,13 +81,12 @@ const SoftwareSection = () => {
               variants={fadeIn('up', 'tween', index * 0.05, 0.5)}
               className="flex flex-col items-center"
             >
-              <div className="w-20 h-20 bg-white rounded-md shadow-md flex items-center justify-center mb-4">
-                <div 
-                  className="w-12 h-12 flex items-center justify-center text-white font-bold text-xl"
-                  style={{ color: tool.color }}
-                >
-                  {tool.abbreviation}
-                </div>
+              <div className="w-20 h-20 bg-white rounded-md shadow-md flex items-center justify-center mb-4 p-2">
+                <img 
+                  src={tool.logo} 
+                  alt={`${tool.name} logo`} 
+                  className="w-16 h-16 object-contain" 
+                />
               </div>
               <h3 className="font-bold text-lg mb-1">{tool.name}</h3>
               <p className="text-gray-600 text-sm text-center">{tool.description}</p>

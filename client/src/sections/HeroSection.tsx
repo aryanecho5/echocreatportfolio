@@ -57,13 +57,7 @@ const HeroSection = () => {
                     <path d="m12 5 7 7-7 7"></path>
                   </svg>
                 </a>
-                <button className="border-2 border-[#0CAF60] text-[#0CAF60] px-6 py-2.5 rounded-full font-medium hover:bg-[#0CAF60] hover:text-white transition-all duration-300 flex items-center gap-2">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <polygon points="10 8 16 12 10 16 10 8"></polygon>
-                  </svg>
-                  Watch Showreel
-                </button>
+
               </div>
             </div>
           </div>

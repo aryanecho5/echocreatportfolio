@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Company Info */}
           <motion.div
             initial="hidden"
@@ -76,33 +76,6 @@ const Footer = () => {
               <li><a href="#" className="text-gray-400 hover:text-[#0CAF60] transition-colors duration-300">Terms of Service</a></li>
               <li><a href="#contact" className="text-gray-400 hover:text-[#0CAF60] transition-colors duration-300">Contact</a></li>
             </ul>
-          </motion.div>
-          
-          {/* Newsletter */}
-          <motion.div
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true }}
-            variants={fadeIn('up', 'tween', 0.4, 0.6)}
-          >
-            <h4 className="font-bold text-lg mb-4">Stay Updated</h4>
-            <p className="text-gray-400 mb-4">Subscribe to our newsletter for the latest updates and creative insights.</p>
-            <form className="flex gap-2">
-              <input 
-                type="email" 
-                placeholder="Your email" 
-                className="px-4 py-2 rounded-lg bg-gray-800 text-white border border-gray-700 focus:ring-2 focus:ring-[#0CAF60] focus:border-[#0CAF60] transition-all flex-grow" 
-              />
-              <button 
-                type="submit" 
-                className="bg-[#0CAF60] text-white px-4 py-2 rounded-lg hover:bg-[#089e51] transition-colors"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="22" y1="2" x2="11" y2="13"></line>
-                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                </svg>
-              </button>
-            </form>
           </motion.div>
         </div>
         
