@@ -35,43 +35,43 @@ const thumbnailsGrid = [
   },
   {
     category: 'Tech',
-    imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=450',
+    imageUrl: 'https://media-hosting.imagekit.io/9f634310ee3d4978/ggg.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=yVbZ2E7h5RIEXYxSgtYBduOgsux-xQErPYEe1JYoRRQBwI1OEdj2Y-cwh7ouMcp6EV~PuxRifgFvFD7DL0wSx70yh3O-Uu-BRMUOE14qj34F2v-Tcox2KTaLO5edjTqwwygJ7i8zLUQz0iS5-g1JmSB8Bdy~AY4tHVo~wPGZqUpddJQm36Q9TVuED~BFIdJgwex34~UFM2LpHEJI-2ozaaDG4l4ikc1rRGIFdgVsUKRP4DBg~N4PhPAgph60coW9hcOJGiRHSnqjibSpiu4P0mLBBVrREebZcabNDgFVYEAXQOHDabbaTf1~vfqghjIaf20Q9TfLe4zjqvA9YWVxpQ__',
     title: 'AI Future Trends',
     views: '845K'
   },
   {
     category: 'Cinematic',
-    imageUrl: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&w=800&h=450',
+    imageUrl: 'https://media-hosting.imagekit.io/24c45c53842146f0/efh_20250406015220_3911199_11cd8_698fb.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=q4t7qv~B5-O2KYMxG8dMxUWSmX7X55-P-b9chDFU4Dsb0DcbAkZ4PlxxXSnl6a0qubfq3rKGwcqZCzE9xAxg9ZX4~LuffTIgh7TA9sMM7GEWZ56C4Du7xmcvLARYS2CmxvhTRPe6~lG1uRIHAG-qznSPV-r5bx~3XH2H8yFx-X~m5K9BTuwZEIS4o4UXtsxADQmX95wubXog9aZvGv1futsmfz96gxGRsy9Ds-RMVAdLwWms7GDGXcgigTtx2zWTJORgsMSfeNXaSU4OoWRNjAJunYgbftVHcad~tkTCOMx2xlZmxVSYWzU~d5yamB6PDsUVXCXJXrpWK3PJhWCTOA__',
     title: 'Night City Vibes',
     views: '2.3M'
   },
   {
     category: 'Lifestyle',
-    imageUrl: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&h=450',
+    imageUrl: 'https://media-hosting.imagekit.io/2465487260cd4877/Untitled-1.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=q3PS6WGVrSPK~qtxlGMheLgtSeG5mQsFibEi5RWMVG0HtTP0cpgej0iCAXS4mWEXBnUuL23GEHVzlrZF54dsSIT2cISP1k~HSOtCgrEqozTEDpareU-nJdEnTkaJ08YWYLUzSzrpHeh5Hqtd6A-DIV79zcM2vT8nQGmYq5wZfdbvA2CDdorcWI5B0DbSixvIPzAP1q76EthxYgB6Qc7-3paJSZpOdurO7pY~CMAJVQclYTxX3vqzAZwVAWTOI~q87KUg102FXWQJ~pbo0RpsDTCmeeCr7tLloOGz2ss3sEjlLYTNKy6W7IH4HW2YWd2coh4z9vF-rkBXcC17yPQeGQ__',
     title: 'Morning Routine',
     views: '987K'
   },
   {
     category: 'Educational',
-    imageUrl: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&h=450',
+    imageUrl: 'https://media-hosting.imagekit.io/35e27a24700143cb/JHFVCXZ.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=wBACS7tn4PV1ro39p67rSNfgFhpjO3dPAGlLMBafUyUHvrMOfsLyplXCZbeS8ktTINlQ-0pAfBbdg2TCZ8nP8YDx2U3Y1Y6Z7QAxBh0K9q~YOk96UWsn1vMBaKMxCiZVuavqC3TPFF065DQBzUhd68g9j9ZwcPtVjzLOiHcAkRF6AUtSS2TbHSBHByt1K0Q07mleQLl09TaTc4~Uoz77vV-s-gR~vHUfq~8dct~MwvQYyVkflmE6RCe2pMduyTrc-x~YUIu0Lqba5h79xBUk2XVDaf9EKBxxi0ZV7IS6bOuRmap1iMMYAw-no3JJoOgQfDkXAWGUKLsR5uGhTQoZxw__',
     title: 'Learning to Code',
     views: '1.5M'
   },
   {
     category: 'Travel',
-    imageUrl: 'https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=800&h=450',
+    imageUrl: 'https://media-hosting.imagekit.io/951b61ac2c9540df/d.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=zJrT~PSs7W03nIOK8K~p7CMaTTk1acI9ScZgkQSGaSp-6MDBSgPoOcRd6DXJl4BrOZiVvSpF-yS8dtXET5WP7GvqOhgg88Uxb96N4Vusa9h4nYqX~gmafQicgQ7w6xZVaJ2yj3D-9FRv2ZDPq6Yq7CraAXrbvja25A-1taaVhRgUTwO-QKR1c~GNyc9EX8BaqT5bp6GIZWZEX4ickT5GJmWTua0Rp-j0X5g5hpZSST651A13Y2jcIGv1KuC2nnC~06ftytvO~AZfVgXN40n3ae9bd5mSAWLfywcwQeBrVPw41GmdsoMGfSNJbIwHBXRt2W4PkvOJiD21Sr3DlWvU9w__',
     title: 'Exploring Japan',
     views: '3.1M'
   },
   {
     category: 'Food',
-    imageUrl: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&h=450',
+    imageUrl: 'https://media-hosting.imagekit.io/3086b2be677c4791/KMJNBHGVF.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=U1dqdSlDdMgrmlnouPcnd~dmIX~ZkY1FkTIRcBbcaTeHjEbupfNYHxIxo9WESzymidecPnDT0J-7gVoeefFdlIhekX8bs2DbEAnZ8P6yiMKNeTttiLERhjCXkHa4-Wp5VD4UhlNu5uFsH0pzVeaottNkv4ifjCQiAYLrByHLHjriqHcFUsBtUuUrbUaVi0U11Cs4PiLlbypADj6b~ztkAQm-3Fja7U9o9TtMts~aRz7WhgS~lhFuvOiGoAUWcFe4s6uZX3bLeyjgP2Q5RLwFv4CbkvOksxH1-UimIYHmkOILLYcdTwU7m-IWWAkC9Csa4qkbmX~v5Sxxug-vrWkkgw__',
     title: 'Gourmet Pizza',
     views: '678K'
   },
   {
     category: 'Music',
-    imageUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&h=450',
+    imageUrl: 'https://media-hosting.imagekit.io/cc148e29fbe84a86/tanisq%20best%20copy.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=BOpTC2AIgEEk4MLNUb3zM2pCMy1o~~2oflszVIZ4lrbcp9GcO-dS8tvjZxO8Otft83BQXX4Ad2sMzO00~cRAFRJG1zxpK2mqV5AhDm1Cccefxx34Dqz0QST7bcB64XTfI4Wv-dndc8BtbsgK8iYU3DDs~w03NeFrCdwOaOfNlt~LL-cWUfIHKFksTbqIc3eY1elPtP2DzERT6wBt1Dr8glT~G7kkIgBJVuHjBKNFeI6yFx5RppReTDNQ856nUcOT3w1dcEELXhP8Y0-8OX8U17TtW9cDs-19uQdx7Xhx6iDHUiLE3MaBiXqylte2xS2vA9oaIjIiFldiBU~Dg~BC7g__',
     title: 'Studio Session',
     views: '1.4M'
   }
