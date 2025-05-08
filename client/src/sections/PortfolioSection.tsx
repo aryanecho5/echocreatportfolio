@@ -35,7 +35,7 @@ const thumbnailsGrid = [
   },
   {
     category: 'Tech',
-    imageUrl: 'https://media-hosting.imagekit.io/9f634310ee3d4978/ggg.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=yVbZ2E7h5RIEXYxSgtYBduOgsux-xQErPYEe1JYoRRQBwI1OEdj2Y-cwh7ouMcp6EV~PuxRifgFvFD7DL0wSx70yh3O-Uu-BRMUOE14qj34F2v-Tcox2KTaLO5edjTqwwygJ7i8zLUQz0iS5-g1JmSB8Bdy~AY4tHVo~wPGZqUpddJQm36Q9TVuED~BFIdJgwex34~UFM2LpHEJI-2ozaaDG4l4ikc1rRGIFdgVsUKRP4DBg~N4PhPAgph60coW9hcOJGiRHSnqjibSpiu4P0mLBBVrREebZcabNDgFVYEAXQOHDabbaTf1~vfqghjIaf20Q9TfLe4zjqvA9YWVxpQ__',
+    imageUrl: 'https://media-hosting.imagekit.io/7dae7f879e094a39/ZSXDCFVGBNM.png?Expires=1841330708&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=HKN5fov2x9zs64yp0OiMyAx5u1dRu6UHrV-0KWFcFUzM7d5AnyUXG6Wm3L3OhbvwSifhSkcPVXtD1fNwDEmQ0mBHQCHsrUjru5Mui-UEXC2lpkLsL9w06oAx7VxEHu9tV3rViL3MaPUM3xdXKafD4l6qdu-9ZDVAYCCZyr4Na2dmPd~5k5BS5KB2SJkdXTqJ1I2ta9t0FvD50QY90Otg7g5cIcNvCeplQq2I5VZCUjsUhIXyMDW-EeAhnUv8Hhm27LFgJevd6niYQ82vAyeapH1xdzAah5pLYjdeTD98N0oKL58GuxpG~4O3tEGB3kBHr5~wc9jaiGmuFFfV7zg43A__',
     title: 'AI Future Trends',
     views: '845K'
   },
