@@ -120,12 +120,7 @@ const ContactSection = () => {
                     <circle cx="4" cy="4" r="2"></circle>
                   </svg>
                 </a>
-                {/* Behance Icon */}
-                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="bg-[rgba(12,175,96,0.1)] p-3 rounded-full text-[#0CAF60] hover:bg-[#0CAF60] hover:text-white transition-colors duration-300">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.5 6h-3v1h3v-1zm-6.5 5.5c0-1.24.964-2.5 2.5-2.5 1.5 0 2.5 1.5 2.5 2.5 0 2-1.5 2.5-2.5 2.5h-2.5V8.5h5V7.5h-6v8h3.271c2.041 0 3.729-1.729 3.729-4 0-2.24-1.75-4-4-4-2.2 0-4 1.8-4 4h2z" />
-                  </svg>
-                </a>
+
               </div>
             </div>
           </motion.div>

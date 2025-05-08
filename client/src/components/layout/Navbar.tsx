@@ -98,7 +98,17 @@ const Navbar = () => {
                   <a
                     href={item.href}
                     className="relative px-2 py-4 text-gray-800 font-medium transition-colors duration-300"
-                    onClick={() => setActiveItem(item.name)}
+                    onClick={(e) => {
+                      // Prevent auto-scroll from changing the active item
+                      e.preventDefault();
+                      setActiveItem(item.name);
+                      // After setting the active item, smoothly scroll to the target section
+                      const targetId = item.href.substring(1);
+                      const targetElement = document.getElementById(targetId);
+                      if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}
                   >
                     <span className={`${activeItem === item.name ? 'text-[#0CAF60] font-semibold' : 'hover:text-[#0CAF60]'}`}>
                       {item.name}
@@ -159,9 +169,16 @@ const Navbar = () => {
               key={item.name}
               href={item.href} 
               className={`block px-3 py-2 rounded-md ${activeItem === item.name ? 'bg-gray-50 text-[#0CAF60] font-medium' : 'text-gray-800 hover:text-[#0CAF60]'} transition-colors duration-300`}
-              onClick={() => {
+              onClick={(e) => {
+                e.preventDefault();
                 setActiveItem(item.name);
                 setIsMenuOpen(false);
+                // After setting the active item, smoothly scroll to the target section
+                const targetId = item.href.substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                  targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
               }}
               whileHover={{ x: 5 }}
               whileTap={{ scale: 0.95 }}
