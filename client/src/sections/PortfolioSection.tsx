@@ -276,7 +276,7 @@ const PortfolioSection = () => {
               
               {/* Lightbox image - without caption */}
               <img 
-                src={selectedImage.imageUrl} 
+                src="https://media-hosting.imagekit.io/9f634310ee3d4978/ggg.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=yVbZ2E7h5RIEXYxSgtYBduOgsux-xQErPYEe1JYoRRQBwI1OEdj2Y-cwh7ouMcp6EV~PuxRifgFvFD7DL0wSx70yh3O-Uu-BRMUOE14qj34F2v-Tcox2KTaLO5edjTqwwygJ7i8zLUQz0iS5-g1JmSB8Bdy~AY4tHVo~wPGZqUpddJQm36Q9TVuED~BFIdJgwex34~UFM2LpHEJI-2ozaaDG4l4ikc1rRGIFdgVsUKRP4DBg~N4PhPAgph60coW9hcOJGiRHSnqjibSpiu4P0mLBBVrREebZcabNDgFVYEAXQOHDabbaTf1~vfqghjIaf20Q9TfLe4zjqvA9YWVxpQ__" 
                 alt={selectedImage.title} 
                 className="max-h-[80vh] mx-auto" 
               />
