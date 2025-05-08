@@ -35,7 +35,7 @@ const thumbnailsGrid = [
   },
   {
     category: 'Tech',
-    imageUrl: 'https://media-hosting.imagekit.io/7dae7f879e094a39/ZSXDCFVGBNM.png?Expires=1841330708&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=HKN5fov2x9zs64yp0OiMyAx5u1dRu6UHrV-0KWFcFUzM7d5AnyUXG6Wm3L3OhbvwSifhSkcPVXtD1fNwDEmQ0mBHQCHsrUjru5Mui-UEXC2lpkLsL9w06oAx7VxEHu9tV3rViL3MaPUM3xdXKafD4l6qdu-9ZDVAYCCZyr4Na2dmPd~5k5BS5KB2SJkdXTqJ1I2ta9t0FvD50QY90Otg7g5cIcNvCeplQq2I5VZCUjsUhIXyMDW-EeAhnUv8Hhm27LFgJevd6niYQ82vAyeapH1xdzAah5pLYjdeTD98N0oKL58GuxpG~4O3tEGB3kBHr5~wc9jaiGmuFFfV7zg43A__',
+    imageUrl: 'https://media-hosting.imagekit.io/cc148e29fbe84a86/tanisq%20best%20copy.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=BOpTC2AIgEEk4MLNUb3zM2pCMy1o~~2oflszVIZ4lrbcp9GcO-dS8tvjZxO8Otft83BQXX4Ad2sMzO00~cRAFRJG1zxpK2mqV5AhDm1Cccefxx34Dqz0QST7bcB64XTfI4Wv-dndc8BtbsgK8iYU3DDs~w03NeFrCdwOaOfNlt~LL-cWUfIHKFksTbqIc3eY1elPtP2DzERT6wBt1Dr8glT~G7kkIgBJVuHjBKNFeI6yFx5RppReTDNQ856nUcOT3w1dcEELXhP8Y0-8OX8U17TtW9cDs-19uQdx7Xhx6iDHUiLE3MaBiXqylte2xS2vA9oaIjIiFldiBU~Dg~BC7g__',
     title: 'AI Future Trends',
     views: '845K'
   },
@@ -71,7 +71,7 @@ const thumbnailsGrid = [
   },
   {
     category: 'Music',
-    imageUrl: 'https://media-hosting.imagekit.io/cc148e29fbe84a86/tanisq%20best%20copy.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=BOpTC2AIgEEk4MLNUb3zM2pCMy1o~~2oflszVIZ4lrbcp9GcO-dS8tvjZxO8Otft83BQXX4Ad2sMzO00~cRAFRJG1zxpK2mqV5AhDm1Cccefxx34Dqz0QST7bcB64XTfI4Wv-dndc8BtbsgK8iYU3DDs~w03NeFrCdwOaOfNlt~LL-cWUfIHKFksTbqIc3eY1elPtP2DzERT6wBt1Dr8glT~G7kkIgBJVuHjBKNFeI6yFx5RppReTDNQ856nUcOT3w1dcEELXhP8Y0-8OX8U17TtW9cDs-19uQdx7Xhx6iDHUiLE3MaBiXqylte2xS2vA9oaIjIiFldiBU~Dg~BC7g__',
+    imageUrl: 'https://media-hosting.imagekit.io/7dae7f879e094a39/ZSXDCFVGBNM.png?Expires=1841330708&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=HKN5fov2x9zs64yp0OiMyAx5u1dRu6UHrV-0KWFcFUzM7d5AnyUXG6Wm3L3OhbvwSifhSkcPVXtD1fNwDEmQ0mBHQCHsrUjru5Mui-UEXC2lpkLsL9w06oAx7VxEHu9tV3rViL3MaPUM3xdXKafD4l6qdu-9ZDVAYCCZyr4Na2dmPd~5k5BS5KB2SJkdXTqJ1I2ta9t0FvD50QY90Otg7g5cIcNvCeplQq2I5VZCUjsUhIXyMDW-EeAhnUv8Hhm27LFgJevd6niYQ82vAyeapH1xdzAah5pLYjdeTD98N0oKL58GuxpG~4O3tEGB3kBHr5~wc9jaiGmuFFfV7zg43A__',
     title: 'Studio Session',
     views: '1.4M'
   }
