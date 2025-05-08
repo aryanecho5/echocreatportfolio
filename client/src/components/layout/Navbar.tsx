@@ -40,17 +40,83 @@ const Navbar = () => {
     }
   };
 
+  // Helper function to get an element's distance from the top of the page
+  const getOffsetTop = (element: HTMLElement) => {
+    let offsetTop = 0;
+    while(element) {
+      offsetTop += element.offsetTop;
+      element = element.offsetParent as HTMLElement;
+    }
+    return offsetTop;
+  };
+
+  // Initialize and run handleScroll once when component mounts to set initial active section
   useEffect(() => {
     const handleScroll = () => {
       // Update scrolled state
       setScrolled(window.scrollY > 20);
+      
+      // Get all section elements
+      const sections = navItems.map(item => {
+        const id = item.href.substring(1);
+        const element = document.getElementById(id);
+        return { id, element, name: item.name };
+      }).filter(item => item.element !== null);
+      
+      // Calculate which section is currently in view
+      const scrollPosition = window.scrollY + 100; // Add offset to account for header height
+      
+      // Check if we're at the top of the page (home section)
+      if (scrollPosition < 300) {
+        if (activeItem !== "Home") {
+          setActiveItem("Home");
+        }
+        return;
+      }
+      
+      // Sort sections by their position on the page (top to bottom)
+      const sortedSections = [...sections].sort((a, b) => {
+        if (!a.element || !b.element) return 0;
+        return getOffsetTop(a.element) - getOffsetTop(b.element);
+      });
+      
+      // Find the section that's currently in view
+      for (let i = 0; i < sortedSections.length; i++) {
+        const section = sortedSections[i];
+        if (!section.element) continue;
+        
+        const sectionTop = getOffsetTop(section.element) - 100; // Add some offset for better detection
+        const sectionBottom = sectionTop + section.element.offsetHeight;
+        
+        // Check if the current scroll position is within this section
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+          // Find the nav item name that corresponds to this section
+          const activeNavItem = navItems.find(item => item.href === `#${section.id}`);
+          if (activeNavItem && activeNavItem.name !== activeItem) {
+            setActiveItem(activeNavItem.name);
+          }
+          return;
+        }
+      }
+      
+      // If we're past all sections, activate the last one
+      if (sortedSections.length > 0) {
+        const lastSection = sortedSections[sortedSections.length - 1];
+        const activeNavItem = navItems.find(item => item.href === `#${lastSection.id}`);
+        if (activeNavItem && activeNavItem.name !== activeItem) {
+          setActiveItem(activeNavItem.name);
+        }
+      }
     };
 
+    // Call handleScroll once when component mounts
+    handleScroll();
+    
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [activeItem]);
 
   return (
     <motion.header 
