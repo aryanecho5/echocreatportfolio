@@ -32,19 +32,19 @@ const videoSamples: VideoSample[] = [
   },
   {
     id: 3,
-    title: "Cinematic Short Film",
-    thumbnailUrl: "https://images.unsplash.com/photo-1536240478700-b869070f9279?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=450",
-    videoUrl: "https://player.vimeo.com/external/370467031.sd.mp4?s=32b3aa6857b283fee8d72cd04ee4140764c9da7e&profile_id=164",
-    duration: "5:30",
-    category: "Cinematic"
+    title: "Gaming Montage",
+    thumbnailUrl: "https://img.youtube.com/vi/AeGR_I-dyBQ/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/AeGR_I-dyBQ",
+    duration: "3:30",
+    category: "Gaming"
   },
   {
     id: 4,
-    title: "Brand Promotion",
-    thumbnailUrl: "https://images.unsplash.com/photo-1498075702571-ecb018f3752d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=450",
-    videoUrl: "https://player.vimeo.com/external/338683220.sd.mp4?s=c1c0e812feb2f8aa902c8365e2dd8656402a36c8&profile_id=165",
-    duration: "1:45",
-    category: "Commercial"
+    title: "Gaming Highlights",
+    thumbnailUrl: "https://img.youtube.com/vi/OcAmmUB7slA/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/OcAmmUB7slA",
+    duration: "2:45",
+    category: "Gaming"
   }
 ];
 
