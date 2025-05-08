@@ -52,6 +52,8 @@ const videoSamples: VideoSample[] = [
 const VideoPlayerModal = ({ video, isOpen, onClose }: { video: VideoSample | null, isOpen: boolean, onClose: () => void }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [showControls, setShowControls] = useState(false);
 
   // Handle escape key to close the modal
   useEffect(() => {
@@ -74,13 +76,16 @@ const VideoPlayerModal = ({ video, isOpen, onClose }: { video: VideoSample | nul
     };
   }, [isOpen, onClose]);
 
-  // Reset loading state when modal opens/closes
+  // Reset states when modal opens/closes
   useEffect(() => {
     if (isOpen) {
       setIsLoading(true);
+      setIsPlaying(false);
+      setShowControls(false);
     } else {
-      // Reset state when modal closes
       setIsLoading(false);
+      setIsPlaying(false);
+      setShowControls(false);
     }
   }, [isOpen]);
 
@@ -90,7 +95,30 @@ const VideoPlayerModal = ({ video, isOpen, onClose }: { video: VideoSample | nul
     if (videoRef.current) {
       videoRef.current.play().catch(error => {
         console.error("Auto-play failed:", error);
+        setIsPlaying(false);
       });
+    }
+  };
+
+  const handlePlay = () => {
+    setIsPlaying(true);
+  };
+
+  const handlePause = () => {
+    setIsPlaying(false);
+  };
+
+  const handleEnded = () => {
+    setIsPlaying(false);
+  };
+
+  const handleMouseEnter = () => {
+    setShowControls(true);
+  };
+
+  const handleMouseLeave = () => {
+    if (!isPlaying) {
+      setShowControls(false);
     }
   };
 
@@ -117,11 +145,13 @@ const VideoPlayerModal = ({ video, isOpen, onClose }: { video: VideoSample | nul
             exit={{ scale: 0.9, opacity: 0 }}
             transition={{ type: 'spring', duration: 0.5 }}
             className="relative z-10 w-full max-w-5xl mx-auto aspect-video rounded-lg overflow-hidden shadow-2xl"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             {/* Close button */}
             <motion.button
               onClick={onClose}
-              className="absolute top-4 right-4 z-20 rounded-full bg-black bg-opacity-70 p-2 text-white hover:bg-opacity-90 hover:text-[#0CAF60] transition-all"
+              className="absolute top-4 right-4 z-30 rounded-full bg-black bg-opacity-70 p-2 text-white hover:bg-opacity-90 hover:text-[#0CAF60] transition-all"
               whileHover={{ scale: 1.1, backgroundColor: 'rgba(0, 0, 0, 0.9)' }}
               whileTap={{ scale: 0.95 }}
             >
@@ -130,7 +160,7 @@ const VideoPlayerModal = ({ video, isOpen, onClose }: { video: VideoSample | nul
             
             {/* Loading spinner */}
             {isLoading && (
-              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-10">
+              <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 z-20">
                 <div className="w-16 h-16 border-4 border-[#0CAF60] border-t-transparent rounded-full animate-spin"></div>
               </div>
             )}
@@ -142,23 +172,29 @@ const VideoPlayerModal = ({ video, isOpen, onClose }: { video: VideoSample | nul
               className="w-full h-full object-contain bg-black" 
               controls 
               onLoadedData={handleLoadedData}
+              onPlay={handlePlay}
+              onPause={handlePause}
+              onEnded={handleEnded}
               controlsList="nodownload"
               playsInline
             />
             
-            {/* Video info */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent py-4 px-6"
-            >
-              <h3 className="text-white text-lg md:text-xl font-bold">{video.title}</h3>
-              <div className="flex items-center mt-1">
-                <span className="text-[#0CAF60] text-sm mr-3">{video.category}</span>
-                <span className="text-gray-300 text-sm">{video.duration}</span>
-              </div>
-            </motion.div>
+            {/* Video info - only show when not playing or when hovering */}
+            {(!isPlaying || showControls) && (
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 20 }}
+                transition={{ duration: 0.3 }}
+                className={`absolute z-20 left-0 right-0 bg-gradient-to-t from-black to-transparent px-6 ${isPlaying ? 'bottom-16 py-2' : 'bottom-0 py-4'}`}
+              >
+                <h3 className="text-white text-lg md:text-xl font-bold">{video.title}</h3>
+                <div className="flex items-center mt-1">
+                  <span className="text-[#0CAF60] text-sm mr-3">{video.category}</span>
+                  <span className="text-gray-300 text-sm">{video.duration}</span>
+                </div>
+              </motion.div>
+            )}
           </motion.div>
         </motion.div>
       )}
