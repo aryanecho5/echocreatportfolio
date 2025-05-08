@@ -4,52 +4,46 @@ import { fadeIn, staggerContainer } from '@/lib/animation';
 // Define software tools
 const softwareTools = [
   {
+    name: 'Photoshop',
+    description: 'Image Editing',
+    color: '#31A8FF',
+    abbreviation: 'Ps'
+  },
+  {
     name: 'Premiere Pro',
-    description: 'Professional video editing',
+    description: 'Video Editing',
     color: '#EA77FF',
     abbreviation: 'Pr'
   },
   {
     name: 'After Effects',
-    description: 'Motion graphics & VFX',
+    description: 'Motion Graphics',
     color: '#9999FF',
     abbreviation: 'Ae'
   },
   {
-    name: 'Photoshop',
-    description: 'Image editing & composition',
-    color: '#31A8FF',
-    abbreviation: 'Ps'
-  },
-  {
-    name: 'DaVinci Resolve',
-    description: 'Color grading & finishing',
-    color: '#E76D43',
-    abbreviation: 'Dr'
-  },
-  {
-    name: 'Cinema 4D',
-    description: '3D modeling & animation',
-    color: '#0256F0',
-    abbreviation: 'C4D'
-  },
-  {
     name: 'Illustrator',
-    description: 'Vector graphics design',
+    description: 'Vector Graphics',
     color: '#FF9A00',
     abbreviation: 'Ai'
   },
   {
-    name: 'Blender',
-    description: '3D creation & animation',
-    color: '#F5792A',
-    abbreviation: 'Bl'
+    name: 'Final Cut Pro',
+    description: 'Video Editing',
+    color: '#00D2F3',
+    abbreviation: 
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+        <path d="M4 4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2H4zm16 12V6H4v12h16z"/>
+      </svg>
   },
   {
-    name: 'Audition',
-    description: 'Audio editing & mixing',
-    color: '#9999FF',
-    abbreviation: 'Au'
+    name: 'Blender',
+    description: '3D Graphics',
+    color: '#F5792A',
+    abbreviation: 
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+        <path d="M12 5c-1.93 0-3.5 1.57-3.5 3.5 0 .59.15 1.15.41 1.65l-5.83 5.83 2.12 2.12 5.83-5.83c.5.26 1.06.41 1.65.41 1.93 0 3.5-1.57 3.5-3.5S13.93 5 12 5z"/>
+      </svg>
   }
 ];
 
@@ -71,47 +65,42 @@ const SoftwareSection = () => {
       >
         {/* Section header */}
         <div className="text-center mb-16">
-          <motion.span 
-            variants={fadeIn('up', 'tween', 0.1, 0.5)}
-            className="inline-block py-1 px-3 rounded-full text-xs font-medium bg-[rgba(12,175,96,0.1)] text-[#0CAF60] mb-4"
-          >
-            OUR TOOLS
-          </motion.span>
           <motion.h2 
             variants={fadeIn('up', 'tween', 0.2, 0.5)}
-            className="text-3xl md:text-5xl font-bold mb-4"
+            className="text-4xl md:text-6xl font-bold mb-6 flex flex-col items-center"
           >
-            Industry-Leading <span className="bg-gradient-text">Software</span>
+            <span className="text-[#0CAF60]">Software</span> 
+            <span className="text-black">We Use</span>
           </motion.h2>
           <motion.p 
             variants={fadeIn('up', 'tween', 0.3, 0.5)}
             className="text-gray-600 max-w-3xl mx-auto"
           >
-            We utilize cutting-edge software to deliver exceptional quality across all our creative services.
+            Professional tools that empower us to create exceptional designs and videos.
           </motion.p>
         </div>
 
         {/* Software Grid */}
         <motion.div 
           variants={staggerContainer()}
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8"
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-10"
         >
           {softwareTools.map((tool, index) => (
             <motion.div 
               key={index} 
               variants={fadeIn('up', 'tween', index * 0.05, 0.5)}
-              className="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-lg transition-shadow duration-300"
+              className="flex flex-col items-center"
             >
-              <div className="w-16 h-16 mx-auto mb-4 bg-gray-100 rounded-full flex items-center justify-center">
+              <div className="w-20 h-20 bg-white rounded-md shadow-md flex items-center justify-center mb-4">
                 <div 
-                  className="w-10 h-10 rounded flex items-center justify-center text-white font-bold text-xs"
-                  style={{ backgroundColor: tool.color }}
+                  className="w-12 h-12 flex items-center justify-center text-white font-bold text-xl"
+                  style={{ color: tool.color }}
                 >
                   {tool.abbreviation}
                 </div>
               </div>
-              <h3 className="font-bold text-lg mb-2">{tool.name}</h3>
-              <p className="text-gray-600 text-sm">{tool.description}</p>
+              <h3 className="font-bold text-lg mb-1">{tool.name}</h3>
+              <p className="text-gray-600 text-sm text-center">{tool.description}</p>
             </motion.div>
           ))}
         </motion.div>
