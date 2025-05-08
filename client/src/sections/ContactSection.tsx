@@ -1,44 +1,7 @@
 import { motion } from 'framer-motion';
 import { fadeIn, staggerContainer } from '@/lib/animation';
-import { useState } from 'react';
-
-interface FormData {
-  name: string;
-  email: string;
-  subject: string;
-  message: string;
-  service: string;
-}
 
 const ContactSection = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    subject: '',
-    message: '',
-    service: ''
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // In a real implementation, this would submit the form data to a server
-    alert('Thank you for your message! We will get back to you shortly.');
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: '',
-      service: ''
-    });
-  };
 
   return (
     <section id="contact" className="py-24 px-4 bg-gray-50 relative">
@@ -77,106 +40,11 @@ const ContactSection = () => {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
-          <motion.div 
-            variants={fadeIn('right', 'tween', 0.4, 0.6)}
-            className="bg-white p-8 rounded-xl shadow-lg"
-          >
-            <h3 className="text-2xl font-bold mb-6">Send Us a Message</h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                  <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Your Name" 
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0CAF60] focus:border-[#0CAF60] transition-all" 
-                    required 
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                  <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Your Email" 
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0CAF60] focus:border-[#0CAF60] transition-all" 
-                    required 
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">Subject</label>
-                <input 
-                  type="text" 
-                  id="subject" 
-                  name="subject" 
-                  value={formData.subject}
-                  onChange={handleChange}
-                  placeholder="Subject" 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0CAF60] focus:border-[#0CAF60] transition-all" 
-                  required 
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                <textarea 
-                  id="message" 
-                  name="message" 
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={5} 
-                  placeholder="Your Message" 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0CAF60] focus:border-[#0CAF60] transition-all" 
-                  required
-                ></textarea>
-              </div>
-              
-              <div>
-                <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">Service Interested In</label>
-                <select 
-                  id="service" 
-                  name="service" 
-                  value={formData.service}
-                  onChange={handleChange}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0CAF60] focus:border-[#0CAF60] transition-all"
-                >
-                  <option value="">Select a service</option>
-                  <option value="thumbnail">Thumbnail Design</option>
-                  <option value="video">Video Editing</option>
-                  <option value="motion">Motion Graphics</option>
-                  <option value="3d">3D Animation</option>
-                  <option value="other">Other</option>
-                </select>
-              </div>
-              
-              <button 
-                type="submit" 
-                className="w-full bg-[#0CAF60] text-white font-medium py-3 px-6 rounded-lg hover:bg-[#089e51] transition-all duration-300 flex items-center justify-center gap-2 shadow-md custom-button"
-              >
-                Send Message
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14"></path>
-                  <path d="m12 5 7 7-7 7"></path>
-                </svg>
-              </button>
-            </form>
-          </motion.div>
-          
+        <div className="max-w-3xl mx-auto">
           {/* Contact Information */}
           <motion.div 
-            variants={fadeIn('left', 'tween', 0.5, 0.6)}
-            className="flex flex-col justify-between"
+            variants={fadeIn('up', 'tween', 0.4, 0.6)}
+            className="flex flex-col justify-between bg-white p-8 rounded-xl shadow-lg"
           >
             <div>
               <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
