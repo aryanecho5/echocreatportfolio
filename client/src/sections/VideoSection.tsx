@@ -24,11 +24,11 @@ const videoSamples: VideoSample[] = [
   },
   {
     id: 2,
-    title: "Motion Graphics Showcase",
-    thumbnailUrl: "https://images.unsplash.com/photo-1535016120720-40c646be5580?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=450",
-    videoUrl: "https://player.vimeo.com/external/308912281.hd.mp4?s=70cdfc39fdb7b8f055a1347f59e78d239719e094&profile_id=175",
+    title: "Gaming Showcase",
+    thumbnailUrl: "https://img.youtube.com/vi/CSuaaLlG3wY/maxresdefault.jpg",
+    videoUrl: "https://www.youtube.com/embed/CSuaaLlG3wY",
     duration: "2:15",
-    category: "Animation"
+    category: "Gaming"
   },
   {
     id: 3,
