@@ -50,18 +50,21 @@ const SoftwareSection = () => {
       >
         {/* Section header */}
         <div className="text-center mb-16">
-          <motion.h2 
+          <motion.div 
             variants={fadeIn('up', 'tween', 0.1, 0.5)}
-            className="text-lg uppercase tracking-widest text-[#0CAF60] mb-2 font-medium"
+            className="mb-2"
           >
-            Our Tools
-          </motion.h2>
-          <motion.h3 
+            <span className="inline-block px-4 py-1 rounded-full bg-[#0CAF60] bg-opacity-10 text-[#0CAF60] text-sm font-medium">
+              OUR TOOLS
+            </span>
+          </motion.div>
+          <motion.div 
             variants={fadeIn('up', 'tween', 0.2, 0.5)}
-            className="text-4xl md:text-6xl font-bold mb-6 inline-block"
+            className="text-4xl md:text-5xl font-bold mb-6 inline-block"
           >
-            Softwares We Use
-          </motion.h3>
+            <span className="text-black">Softwares </span>
+            <span className="text-[#0CAF60]">We Use</span>
+          </motion.div>
           <motion.p 
             variants={fadeIn('up', 'tween', 0.3, 0.5)}
             className="text-gray-600 max-w-3xl mx-auto"
