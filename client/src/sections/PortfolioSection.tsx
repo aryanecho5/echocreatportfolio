@@ -13,7 +13,7 @@ const featuredThumbnails = [
   },
   {
     category: 'Tech',
-    imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&h=450',
+    imageUrl: 'https://media-hosting.imagekit.io/9f634310ee3d4978/ggg.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=yVbZ2E7h5RIEXYxSgtYBduOgsux-xQErPYEe1JYoRRQBwI1OEdj2Y-cwh7ouMcp6EV~PuxRifgFvFD7DL0wSx70yh3O-Uu-BRMUOE14qj34F2v-Tcox2KTaLO5edjTqwwygJ7i8zLUQz0iS5-g1JmSB8Bdy~AY4tHVo~wPGZqUpddJQm36Q9TVuED~BFIdJgwex34~UFM2LpHEJI-2ozaaDG4l4ikc1rRGIFdgVsUKRP4DBg~N4PhPAgph60coW9hcOJGiRHSnqjibSpiu4P0mLBBVrREebZcabNDgFVYEAXQOHDabbaTf1~vfqghjIaf20Q9TfLe4zjqvA9YWVxpQ__',
     title: 'Future of AI Technology',
     views: '845K'
   },
