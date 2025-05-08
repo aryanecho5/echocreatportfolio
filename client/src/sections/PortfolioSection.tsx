@@ -7,7 +7,7 @@ import { X } from 'lucide-react';
 const featuredThumbnails = [
   {
     category: 'Gaming',
-    imageUrl: 'https://media-hosting.imagekit.io/e0893302c10446bf/dcxdx%20copy.png?Expires=1841324763&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=MTOYTX~HtfZsnChdb7-hHG6~slIMhDw2HApj95c1DPnBFdjRigZBEzSiovDCJgxf2kywO-iIsYc8g~oyQmFcoWAYAk0itj4TZvcNsG5bgWNp7ebmBPpBsSXdMxP9GzDrbnCc2X0FVODpTtOE1-PvJdsK3CpHld8nLpOwlogEF7BbHEDs2FuU7Ecpth~jLXYV-QsBJkFe6y4sm6drVPMvR8qF06qEp07Cw~20X7nECXkQmgkU7V9RrR-WaK3nAfUVmsKZV1Slp3~rg1ktQkHu3h0Ay0Jbmb5wPnHjI6-BkIzdS988sQW~8wJmvVamp7RJNdhJKOhbdgnhBHsSGm9ixA__',
+    imageUrl: 'https://media-hosting.imagekit.io/9f634310ee3d4978/ggg.png?Expires=1841325456&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=yVbZ2E7h5RIEXYxSgtYBduOgsux-xQErPYEe1JYoRRQBwI1OEdj2Y-cwh7ouMcp6EV~PuxRifgFvFD7DL0wSx70yh3O-Uu-BRMUOE14qj34F2v-Tcox2KTaLO5edjTqwwygJ7i8zLUQz0iS5-g1JmSB8Bdy~AY4tHVo~wPGZqUpddJQm36Q9TVuED~BFIdJgwex34~UFM2LpHEJI-2ozaaDG4l4ikc1rRGIFdgVsUKRP4DBg~N4PhPAgph60coW9hcOJGiRHSnqjibSpiu4P0mLBBVrREebZcabNDgFVYEAXQOHDabbaTf1~vfqghjIaf20Q9TfLe4zjqvA9YWVxpQ__',
     title: 'Fortnite Season X',
     views: '1.2M'
   },
