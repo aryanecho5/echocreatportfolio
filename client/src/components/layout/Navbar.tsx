@@ -28,18 +28,18 @@ const Navbar = () => {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, itemName: string) => {
     e.preventDefault();
     setActiveItem(itemName);
-
+    
     // Get the corresponding href for the clicked item
     const targetItem = navItems.find(item => item.name === itemName);
     if (!targetItem) return;
-
+    
     // Scroll to the target element
     const targetId = targetItem.href.substring(1);
     const targetElement = document.getElementById(targetId);
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: 'smooth' });
     }
-
+    
     // Close the mobile menu if it's open
     if (isMenuOpen) {
       setIsMenuOpen(false);
@@ -63,19 +63,19 @@ const Navbar = () => {
 
   useEffect(() => {
     if (!isMenuOpen) return;
-
+    
     const handleClickOutside = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       if (!menuRef.current?.contains(target) && !buttonRef.current?.contains(target)) {
         setIsMenuOpen(false);
       }
     };
-
+    
     // Add the event listener with a slight delay to prevent immediate triggering
     const timeoutId = setTimeout(() => {
       document.addEventListener('click', handleClickOutside);
     }, 0);
-
+    
     return () => {
       clearTimeout(timeoutId);
       document.removeEventListener('click', handleClickOutside);
@@ -88,27 +88,27 @@ const Navbar = () => {
       if (isMenuOpen) {
         setIsMenuOpen(false);
       }
-
+      
       // Update scrolled state
       setScrolled(window.scrollY > 20);
-
+      
       // Get all section elements
       const sections = navItems.map(item => {
         const id = item.href.substring(1);
         const element = document.getElementById(id);
         return { id, element, name: item.name };
       }).filter(item => item.element !== null);
-
+      
       // Also check for special sections that should hide the underline
       const softwareSection = document.getElementById('software');
       const testimonialsSection = document.getElementById('testimonials');
-
+      
       // Calculate which section is currently in view
       const scrollPosition = window.scrollY + 100; // Add offset to account for header height
-
+      
       // Check if we're in a special section that should hide the underline
       let inSpecialSection = false;
-
+      
       if (softwareSection) {
         const sectionTop = getOffsetTop(softwareSection) - 120;
         const sectionBottom = sectionTop + softwareSection.offsetHeight;
@@ -116,7 +116,7 @@ const Navbar = () => {
           inSpecialSection = true;
         }
       }
-
+      
       if (testimonialsSection) {
         const sectionTop = getOffsetTop(testimonialsSection) - 120;
         const sectionBottom = sectionTop + testimonialsSection.offsetHeight;
@@ -124,10 +124,10 @@ const Navbar = () => {
           inSpecialSection = true;
         }
       }
-
+      
       // Update the underline visibility with an animation
       setShowUnderline(!inSpecialSection);
-
+      
       // Check if we're at the top of the page (home section)
       if (scrollPosition < 300) {
         if (activeItem !== "Home") {
@@ -135,21 +135,21 @@ const Navbar = () => {
         }
         return;
       }
-
+      
       // Sort sections by their position on the page (top to bottom)
       const sortedSections = [...sections].sort((a, b) => {
         if (!a.element || !b.element) return 0;
         return getOffsetTop(a.element) - getOffsetTop(b.element);
       });
-
+      
       // Find the section that's currently in view
       for (let i = 0; i < sortedSections.length; i++) {
         const section = sortedSections[i];
         if (!section.element) continue;
-
+        
         const sectionTop = getOffsetTop(section.element) - 100; // Add some offset for better detection
         const sectionBottom = sectionTop + section.element.offsetHeight;
-
+        
         // Check if the current scroll position is within this section
         if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
           // Find the nav item name that corresponds to this section
@@ -157,13 +157,13 @@ const Navbar = () => {
           if (activeNavItem && activeNavItem.name !== activeItem) {
             setActiveItem(activeNavItem.name);
           }
-
+          
           // Update the current section
           setCurrentSection(section.id);
           return;
         }
       }
-
+      
       // If we're past all sections, activate the last one
       if (sortedSections.length > 0) {
         const lastSection = sortedSections[sortedSections.length - 1];
@@ -177,7 +177,7 @@ const Navbar = () => {
 
     // Call handleScroll once when component mounts
     handleScroll();
-
+    
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -224,7 +224,7 @@ const Navbar = () => {
               </motion.div>
             </a>
           </motion.div>
-
+          
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center">
             <ul className="flex space-x-8">
@@ -257,7 +257,7 @@ const Navbar = () => {
               ))}
             </ul>
           </nav>
-
+          
           {/* Mobile Navigation Toggle */}
           <motion.div 
             className="md:hidden flex items-center z-50"
@@ -286,7 +286,7 @@ const Navbar = () => {
           </motion.div>
         </div>
       </div>
-
+      
       {/* Mobile Navigation Menu Overlay */}
       <AnimatePresence>
         {isMenuOpen && (
@@ -304,19 +304,21 @@ const Navbar = () => {
       {/* Mobile Navigation Menu */}
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
+          <motion.div 
+            initial={{ height: 0, opacity: 0, y: -10 }}
             animate={{ 
+              height: 'auto',
               opacity: 1,
-              height: "auto"
+              y: 0
             }}
             exit={{ 
+              height: 0,
               opacity: 0,
-              height: 0
+              y: -10
             }}
-            transition={{
-              duration: 0.2,
-              ease: "easeInOut"
+            transition={{ 
+              duration: 0.3,
+              ease: [0.22, 1, 0.36, 1]
             }}
             ref={menuRef}
             className="md:hidden bg-white shadow-md overflow-hidden mobile-menu fixed w-full top-14 left-0 z-40"
