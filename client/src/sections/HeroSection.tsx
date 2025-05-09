@@ -71,7 +71,7 @@ const HeroSection = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-[#0CAF60] to-[#02DF5A] opacity-70 blur-lg rounded-xl"></div>
               <div className="relative bg-black rounded-xl overflow-hidden p-1">
                 <img 
-                  src="https://images.unsplash.com/photo-1618004912476-29818d81ae2e?auto=format&fit=crop&w=800&h=600" 
+                  src="https://media-hosting.imagekit.io/2cbbbb9bd0d7425c/gdfcxz.png?Expires=1841380273&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=NMMTJsP2xLtWCNErlal5EBXj4iGf5W3IGCaBixL-q6S6o4hJpus5wuTemFS8rAfeCqxQokXfnGhpaBKoZ1cuzkLjHzEUdc3oTP6y8-5WS2obM~AAUt7qUvDJmqbTVwEZpjwoYfwPP3FcxgK0jxOXOLKLKEiR6G23B9L0pZlcaayh4Y-NPLfyzozCQNMOVwYivv-vrUIWshZuySq~se6QPrx~KLP57sKs1v6v5u-G7E-~NIjwISB9Ppgt2hBbEjD1aorczfKxMNEczlB5fnNAnk-9A6mLX2ryMVFGyXM7hAyyw-6yWBjkM4raSAi55xS8HIh0w0AOoKj13yAfuzAg5Q__" 
                   alt="Creative workspace with video and image editing"
                   className="w-full h-full object-cover rounded-lg"
                 />
@@ -87,7 +87,7 @@ const HeroSection = () => {
                 style={{ boxShadow: '0 0 20px rgba(12, 175, 96, 0.3)' }}
               >
                 <img
-                  src="https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?auto=format&fit=crop&w=200&h=200"
+                  src="https://media-hosting.imagekit.io/76eefaf96eb84cca/Screen%20Shot%202025-05-09%20at%2012.44.28%20PM%20copy.png?Expires=1841383712&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=pGpMEVkfPNdJDykPKl9IFT-ZZfzTQJfOdO8OwUv1UiRFbMvsAwhhuFgJrOqGdxy0nHDwqttGQ0Fpdo3MfMQeCQIfVcR-oWILNUYZm-JBawumY-rKPRozv17v50bv9sKayeI6Bmik1~Kq3DGJ6CDXfVuAi7KWwOcLgna820dgElthx9i8wNOad9FvlXe74NrHGNpBBBSEs~rZ8MSKTfr0ab2mIPxdOIdu1auY6CVFetHJoXgk8mUyDyH8Xm7nEmMUU4J6YVxyFqDeqWy-uXliVObZ05HS8ICO5FaV7xAl8i~JYNAjcU4u6h2wfUrPCi7py3iCU0QEWdYifMDDNTgQ3Q__"
                   alt="Sample thumbnail"
                   className="w-20 h-20 object-cover rounded-lg"
                 />
