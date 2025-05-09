@@ -295,29 +295,28 @@ const Navbar = () => {
       {/* Mobile Navigation Menu */}
       <AnimatePresence>
         {isMenuOpen && (
-          <>
-            <motion.div 
-              initial={{ height: 0, opacity: 0, y: -10 }}
-              animate={{ 
-                height: 'auto',
-                opacity: 1,
-                y: 0
-              }}
-              exit={{ 
-                height: 0,
-                opacity: 0,
-                y: -10
-              }}
-              transition={{ 
-                duration: 0.3,
-                ease: [0.22, 1, 0.36, 1]
-              }}
-              className="md:hidden bg-white shadow-md overflow-hidden mobile-menu fixed w-full top-14 left-0 z-40"
-            >
-              <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                {navItems.map((item) => (
-                  <motion.a 
-                    key={item.name}
+          <motion.div 
+            initial={{ height: 0, opacity: 0, y: -10 }}
+            animate={{ 
+              height: 'auto',
+              opacity: 1,
+              y: 0
+            }}
+            exit={{ 
+              height: 0,
+              opacity: 0,
+              y: -10
+            }}
+            transition={{ 
+              duration: 0.3,
+              ease: [0.22, 1, 0.36, 1]
+            }}
+            className="md:hidden bg-white shadow-md overflow-hidden mobile-menu fixed w-full top-14 left-0 z-40"
+          >
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          {navItems.map((item) => (
+            <motion.a 
+              key={item.name}
               href={item.href} 
               className={`block px-3 py-2 rounded-md ${activeItem === item.name ? 'bg-gray-50 text-[#0CAF60] font-medium' : 'text-gray-800 hover:text-[#0CAF60]'} transition-colors duration-300`}
               onClick={(e) => handleNavClick(e, item.name)}
