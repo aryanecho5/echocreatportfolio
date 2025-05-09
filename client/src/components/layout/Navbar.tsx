@@ -258,8 +258,8 @@ const Navbar = () => {
             transition={{ delay: 0.3 }}
           >
             <motion.button 
-              onClick={() => setIsMenuOpen(!isMenuOpen)} 
-              className="text-gray-800 hover:text-[#0CAF60] transition-colors duration-300 menu-toggle relative" 
+              onClick={toggleMenu} 
+              className="text-gray-800 hover:text-[#0CAF60] transition-colors duration-300 menu-toggle relative z-50" 
               aria-label="Toggle menu"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -277,12 +277,13 @@ const Navbar = () => {
         initial={false}
         animate={{ 
           height: isMenuOpen ? 'auto' : 0,
+          opacity: isMenuOpen ? 1 : 0
         }}
         transition={{ 
-          duration: 0.4,
+          duration: 0.3,
           ease: [0.22, 1, 0.36, 1]
         }}
-        className="md:hidden bg-white shadow-md overflow-hidden mobile-menu fixed w-full top-14 left-0 z-40"
+        className={`md:hidden bg-white shadow-md overflow-hidden mobile-menu fixed w-full top-14 left-0 z-40 ${isMenuOpen ? 'block' : 'hidden'}`}
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {navItems.map((item) => (
