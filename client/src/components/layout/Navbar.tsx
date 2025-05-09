@@ -252,14 +252,14 @@ const Navbar = () => {
           
           {/* Mobile Navigation Toggle */}
           <motion.div 
-            className="md:hidden flex items-center"
+            className="md:hidden flex items-center z-50"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
           >
             <motion.button 
-              onClick={toggleMenu} 
-              className="text-gray-800 hover:text-[#0CAF60] transition-colors duration-300 menu-toggle" 
+              onClick={() => setIsMenuOpen(!isMenuOpen)} 
+              className="text-gray-800 hover:text-[#0CAF60] transition-colors duration-300 menu-toggle relative" 
               aria-label="Toggle menu"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
@@ -283,7 +283,7 @@ const Navbar = () => {
           duration: 0.4,
           ease: [0.22, 1, 0.36, 1]
         }}
-        className="md:hidden bg-white shadow-md overflow-hidden mobile-menu"
+        className={`md:hidden bg-white shadow-md overflow-hidden mobile-menu fixed w-full top-14 left-0 z-40 ${isMenuOpen ? 'block' : 'hidden'}`}
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {navItems.map((item) => (
