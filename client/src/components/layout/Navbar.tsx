@@ -58,19 +58,26 @@ const Navbar = () => {
 
   // Initialize and run handleScroll once when component mounts to set initial active section
   // Close menu when clicking outside
+  const menuRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
   useEffect(() => {
     if (!isMenuOpen) return;
     
     const handleClickOutside = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
-      // If the menu is open and click is outside the menu and not on the toggle button
-      if (isMenuOpen && !target.closest('.mobile-menu') && !target.closest('.menu-toggle')) {
+      if (!menuRef.current?.contains(target) && !buttonRef.current?.contains(target)) {
         setIsMenuOpen(false);
       }
     };
     
-    document.addEventListener('click', handleClickOutside);
+    // Add the event listener with a slight delay to prevent immediate triggering
+    const timeoutId = setTimeout(() => {
+      document.addEventListener('click', handleClickOutside);
+    }, 0);
+    
     return () => {
+      clearTimeout(timeoutId);
       document.removeEventListener('click', handleClickOutside);
     };
   }, [isMenuOpen]);
@@ -259,6 +266,7 @@ const Navbar = () => {
             transition={{ delay: 0.3 }}
           >
             <motion.button 
+              ref={buttonRef}
               onClick={() => setIsMenuOpen(!isMenuOpen)} 
               className="text-gray-800 hover:text-[#0CAF60] transition-colors duration-300 menu-toggle relative z-50" 
               aria-label="Toggle menu"
@@ -312,6 +320,7 @@ const Navbar = () => {
               duration: 0.3,
               ease: [0.22, 1, 0.36, 1]
             }}
+            ref={menuRef}
             className="md:hidden bg-white shadow-md overflow-hidden mobile-menu fixed w-full top-14 left-0 z-40"
           >
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
