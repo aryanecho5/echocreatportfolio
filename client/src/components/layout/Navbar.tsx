@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import { AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
   { name: "Home", href: "#hero" },
@@ -302,23 +301,21 @@ const Navbar = () => {
       </AnimatePresence>
 
       {/* Mobile Navigation Menu */}
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
         {isMenuOpen && (
           <motion.div 
-            initial={{ height: 0, opacity: 0, y: -10 }}
+            initial={{ height: 0, opacity: 0 }}
             animate={{ 
               height: 'auto',
-              opacity: 1,
-              y: 0
+              opacity: 1
             }}
             exit={{ 
               height: 0,
-              opacity: 0,
-              y: -10
+              opacity: 0
             }}
             transition={{ 
-              duration: 0.3,
-              ease: [0.22, 1, 0.36, 1]
+              duration: 0.2,
+              ease: "easeInOut"
             }}
             ref={menuRef}
             className="md:hidden bg-white shadow-md overflow-hidden mobile-menu fixed w-full top-14 left-0 z-40"
