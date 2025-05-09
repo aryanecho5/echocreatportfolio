@@ -101,7 +101,7 @@ const Navbar = () => {
       // Check if we're in a special section that should hide the underline
       let inSpecialSection = false;
       
-      if (softwareSection && activeItem !== "Contact") {
+      if (softwareSection) {
         const sectionTop = getOffsetTop(softwareSection) - 120;
         const sectionBottom = sectionTop + softwareSection.offsetHeight;
         if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
@@ -109,7 +109,7 @@ const Navbar = () => {
         }
       }
       
-      if (testimonialsSection && activeItem !== "Contact") {
+      if (testimonialsSection) {
         const sectionTop = getOffsetTop(testimonialsSection) - 120;
         const sectionBottom = sectionTop + testimonialsSection.offsetHeight;
         if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
