@@ -258,34 +258,62 @@ const Navbar = () => {
             transition={{ delay: 0.3 }}
           >
             <motion.button 
-              onClick={toggleMenu} 
+              onClick={() => setIsMenuOpen(!isMenuOpen)} 
               className="text-gray-800 hover:text-[#0CAF60] transition-colors duration-300 menu-toggle relative z-50" 
               aria-label="Toggle menu"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
+              {isMenuOpen ? (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
             </motion.button>
           </motion.div>
         </div>
       </div>
       
+      {/* Mobile Navigation Menu Overlay */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 bg-black bg-opacity-50 z-30 md:hidden"
+            onClick={() => setIsMenuOpen(false)}
+          />
+        )}
+      </AnimatePresence>
+
       {/* Mobile Navigation Menu */}
-      <motion.div 
-        initial={false}
-        animate={{ 
-          height: isMenuOpen ? 'auto' : 0,
-          opacity: isMenuOpen ? 1 : 0
-        }}
-        transition={{ 
-          duration: 0.3,
-          ease: [0.22, 1, 0.36, 1]
-        }}
-        className={`md:hidden bg-white shadow-md overflow-hidden mobile-menu fixed w-full top-14 left-0 z-40 ${isMenuOpen ? 'block' : 'hidden'}`}
-      >
-        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div 
+            initial={{ height: 0, opacity: 0, y: -10 }}
+            animate={{ 
+              height: 'auto',
+              opacity: 1,
+              y: 0
+            }}
+            exit={{ 
+              height: 0,
+              opacity: 0,
+              y: -10
+            }}
+            transition={{ 
+              duration: 0.3,
+              ease: [0.22, 1, 0.36, 1]
+            }}
+            className="md:hidden bg-white shadow-md overflow-hidden mobile-menu fixed w-full top-14 left-0 z-40"
+          >
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {navItems.map((item) => (
             <motion.a 
               key={item.name}
