@@ -76,13 +76,10 @@ const Footer = () => {
                 e.preventDefault();
                 document.getElementById('video')?.scrollIntoView({behavior: 'smooth'});
               }} className="text-gray-600 hover:text-[#0CAF60] transition-colors duration-300">Motion Graphics</a></li>
-              <li><a href="#software" onClick={(e) => {
-                e.preventDefault();
-                document.getElementById('software')?.scrollIntoView({behavior: 'smooth'});
-              }} className="text-gray-600 hover:text-[#0CAF60] transition-colors duration-300" onClick={(e) => {
+              <li><a href="#video" onClick={(e) => {
                 e.preventDefault();
                 document.getElementById('video')?.scrollIntoView({behavior: 'smooth'});
-              }}>3D Animation</a></li>
+              }} className="text-gray-600 hover:text-[#0CAF60] transition-colors duration-300">3D Animation</a></li>
               <li><a href="#contact" onClick={(e) => {
                 e.preventDefault();
                 document.getElementById('contact')?.scrollIntoView({behavior: 'smooth'});
