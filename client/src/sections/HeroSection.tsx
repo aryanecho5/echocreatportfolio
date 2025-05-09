@@ -87,7 +87,7 @@ const HeroSection = () => {
                 style={{ boxShadow: '0 0 20px rgba(12, 175, 96, 0.3)' }}
               >
                 <img
-                  src="https://media-hosting.imagekit.io/76eefaf96eb84cca/Screen%20Shot%202025-05-09%20at%2012.44.28%20PM%20copy.png?Expires=1841383712&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=pGpMEVkfPNdJDykPKl9IFT-ZZfzTQJfOdO8OwUv1UiRFbMvsAwhhuFgJrOqGdxy0nHDwqttGQ0Fpdo3MfMQeCQIfVcR-oWILNUYZm-JBawumY-rKPRozv17v50bv9sKayeI6Bmik1~Kq3DGJ6CDXfVuAi7KWwOcLgna820dgElthx9i8wNOad9FvlXe74NrHGNpBBBSEs~rZ8MSKTfr0ab2mIPxdOIdu1auY6CVFetHJoXgk8mUyDyH8Xm7nEmMUU4J6YVxyFqDeqWy-uXliVObZ05HS8ICO5FaV7xAl8i~JYNAjcU4u6h2wfUrPCi7py3iCU0QEWdYifMDDNTgQ3Q__"
+                  src="https://media-hosting.imagekit.io/a9cd9c71f06e424c/a-digital-illustration-in-neon-green-mon_eCGCH2rwSaCXzvjaQJXmQg_w05dTUfRQMmljjD_jBHhWw.png?Expires=1841384985&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=mtqfuxNlctqfJwn-GBNYsR6-X1TIul~Ky5CaYCaK2QBzn2MCsCsRRU0IX6fkeyAcheysBW5DylrB3khHi2G3ayPGrpxPddmoVn97r92bITNy3BS3DJg43fvmZspWKSSoZjytuxCvc4IaRyirJGCwFo0SJU~eNbkSKV0Qle2zShDw3Ra9H7u5g5YlJaJ9PfgPNma4Ycgu57NmG34xRaGEjHOrEnr-TZTI6rutHi9jV0raPJT~uljs7kUwM0m5KIURZ3QFvewoPT1YaDJsq2GyNNrP15eKR2dcvpaSHCP9RZzGc9YcRb893BsELMdGBnf9heAEs1w-YiXyjjcMcxQG4w__"
                   alt="Sample thumbnail"
                   className="w-20 h-20 object-cover rounded-lg"
                 />
