@@ -274,16 +274,15 @@ const Navbar = () => {
       
       {/* Mobile Navigation Menu */}
       <motion.div 
-        initial={{ height: 0, opacity: 0 }}
+        initial={false}
         animate={{ 
           height: isMenuOpen ? 'auto' : 0,
-          opacity: isMenuOpen ? 1 : 0
         }}
         transition={{ 
           duration: 0.4,
           ease: [0.22, 1, 0.36, 1]
         }}
-        className={`md:hidden bg-white shadow-md overflow-hidden mobile-menu fixed w-full top-14 left-0 z-40 ${isMenuOpen ? 'block' : 'hidden'}`}
+        className="md:hidden bg-white shadow-md overflow-hidden mobile-menu fixed w-full top-14 left-0 z-40"
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {navItems.map((item) => (
