@@ -98,13 +98,13 @@ const Navbar = () => {
       // Calculate which section is currently in view
       const scrollPosition = window.scrollY + 100; // Add offset to account for header height
       
-      // Check if we're in a special section that should hide the underline (except for Contact link)
+      // Check if we're in a special section that should hide the underline
       let inSpecialSection = false;
       
       if (softwareSection) {
         const sectionTop = getOffsetTop(softwareSection) - 120;
         const sectionBottom = sectionTop + softwareSection.offsetHeight;
-        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom && activeItem !== "Contact") {
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
           inSpecialSection = true;
         }
       }
@@ -112,7 +112,7 @@ const Navbar = () => {
       if (testimonialsSection) {
         const sectionTop = getOffsetTop(testimonialsSection) - 120;
         const sectionBottom = sectionTop + testimonialsSection.offsetHeight;
-        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom && activeItem !== "Contact") {
+        if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
           inSpecialSection = true;
         }
       }
